@@ -1,0 +1,164 @@
+{
+	"1": {
+		"id": 1,
+		"name": "First Scene",
+		"description": "",
+		"fileDescription": true,
+		"nextScene": 2
+	},
+	"2": {
+		"id": 2,
+		"name": "Opening scene",
+		"description": "With the wolf pack sleadily closing in on you, and the great wolf tensed ready to attack in an instant, you are going to have to act fast and use all your cunning if you are ever going to get out of this dire situation alive.\nWill you:",
+		"fileDescription": false,
+		"exits": [
+			{
+				"id": 1,
+				"description": "Turn your back on the wolf and try to run for it",
+				"key": "run",
+				"sceneId": 43
+			},
+			{
+				"id": 2,
+				"description": "Stand your ground and prepare to meet the Black Wolf's inevitable attack",
+				"key": "attack",
+				"sceneId": 66
+			},
+			{
+				"id": 3,
+				"description": "Seize the initiative and charge the wolf",
+				"key": "charge",
+				"sceneId": 147
+			}
+		],
+		"objects": []
+	},
+	"43": {
+		"id": 43,
+		"name": "Exit Scene",
+		"description": "You reach the exit.",
+		"fileDescription": false,
+		"exits": [],
+		"objects": []
+	},
+	"66": {
+		"id": 66,
+		"name": "Fight Black Wolf",
+		"description": "Feeling thee familiar, reassuring weight of the blade in your hand, you take a deep, measured breaths to calm yourself, and prepare to meet the beast's attack.\nWith a snarl, the creature is on you.",
+		"enemies":[
+			{
+				"name": "Black Wolf",
+				"skill": 8,
+				"stamina": 9,
+				"moveConditions":[
+					{
+						"type": "attributeCheck",
+						"attribute": "stamina",
+						"checkCondition": "lessOrEqual",
+						"value": "6",
+						"nextScene": 271
+					},
+					{
+						"type": "attributeCheck",
+						"attribute": "combatTurn",
+						"checkCondition": "equal",
+						"value": "2",
+						"nextScene": 271
+					}
+				]
+			}
+		],
+		"fileDescription": false,
+		"exits": [],
+		"objects": []
+	},
+	"271": {
+		"id": 271,
+		"name": "271",
+		"description": "",
+		"fileDescription": true,
+		"nextScene": 271001,
+		"conditions":[
+			{
+				"type": "damage",
+				"sourceDescription": "the wolf attack",
+				"value": "2"
+			}
+		]
+	},
+	"271001": {
+		"id": 271001,
+		"name": "271001",
+		"description": "",
+		"fileDescription": true,
+		"nextScene": 111
+	},
+	"111": {
+		"id": 111,
+		"name": "",
+		"description": "",
+		"fileDescription": true,
+		"nextScene": 111001
+	},
+	"111001": {
+		"id": 111001,
+		"name": "",
+		"description": "",
+		"fileDescription": true,
+		"exits": [
+			{
+				"id": 1,
+				"description": "Throw the changing hand into the fire.",
+				"key": "throw",
+				"sceneId": 290
+			},
+			{
+				"id": 2,
+				"description": "Take a closer look.",
+				"key": "look",
+				"sceneId": 139
+			}
+		]
+	},
+	"290": {
+		"id": 290,
+		"name": "",
+		"description": "",
+		"fileDescription": true,
+		"nextScene": 290001,
+		"conditions":[
+			{
+				"type": "statChange",
+				"checkCondition": "add",
+				"attribute": "change",
+				"value": "3"
+			}
+		]
+	},
+	"290001": {
+		"id": 290001,
+		"name": "",
+		"description": "",
+		"fileDescription": true,
+		"exits": [
+			{
+				"id": 1,
+				"description": "Pursue the wolves in the hope of hunting down the animal that bit you.",
+				"key": "hunt",
+				"sceneId": 473
+			},
+			{
+				"id": 2,
+				"description": "Search the woods for the herb belladonna.",
+				"key": "search",
+				"sceneId": 195
+			},
+			{
+				"id": 2,
+				"description": "Go in search of the wisewoman Grand Mother Zekova.",
+				"key": "go",
+				"sceneId": 302
+			}
+		]
+	}
+}

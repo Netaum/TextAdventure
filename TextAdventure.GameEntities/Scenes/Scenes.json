@@ -1,0 +1,620 @@
+{
+    "10": {
+        "conditions": [
+            {
+                "attribute": "item",
+                "checkCondition": "add",
+                "sourceDescription": "",
+                "type": "inventory",
+                "value": "Silver Dagger"
+            },
+            {
+                "attribute": "code",
+                "checkCondition": "add",
+                "sourceDescription": "",
+                "type": "codeword",
+                "value": "Deliugeb"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "10",
+        "nextScene": "350",
+        "spawns": null
+    },
+    "11": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Ring the bell.",
+                "key": "ring",
+                "sceneId": "58"
+            },
+            {
+                "description": "Look for another possible way.",
+                "key": "look",
+                "sceneId": "23"
+            }
+        ],
+        "fileDescription": true,
+        "id": "11",
+        "nextScene": null,
+        "spawns": null
+    },
+    "12": {
+        "conditions": [
+            {
+                "attribute": "",
+                "checkCondition": "",
+                "sourceDescription": "the belladonna poison.",
+                "type": "damage",
+                "value": "2"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "12",
+        "nextScene": "12.1",
+        "spawns": null
+    },
+    "12.1": {
+        "conditions": [
+            {
+                "attribute": "change",
+                "checkCondition": "subtract",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "1"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "12.1",
+        "nextScene": "12.2",
+        "spawns": null
+    },
+    "12.2": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Go after the wolf pack.",
+                "key": "go",
+                "sceneId": "473"
+            },
+            {
+                "description": "Search Grandmother Zekova.",
+                "key": "search",
+                "sceneId": "302"
+            }
+        ],
+        "fileDescription": true,
+        "id": "12.2",
+        "nextScene": null,
+        "spawns": null
+    },
+    "13": {
+        "conditions": [
+            {
+                "attribute": "change",
+                "checkCondition": "add",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "1"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "13",
+        "nextScene": "13.1",
+        "spawns": null
+    },
+    "13.1": {
+        "conditions": null,
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "13.1",
+        "nextScene": "69",
+        "spawns": null
+    },
+    "14": {
+        "conditions": null,
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "14",
+        "nextScene": null,
+        "spawns": [
+            {
+                "description": "GIANT SPIDER HATCHLING",
+                "name": "spiders",
+                "nextScene": "14.1",
+                "numberOfDice": "1",
+                "plus": "1",
+                "skill": "6",
+                "stamina": "2"
+            }
+        ]
+    },
+    "14.1": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Wide, circular tunnel.",
+                "key": "circular",
+                "sceneId": "122"
+            },
+            {
+                "description": "Tunnel with its walls running with water.",
+                "key": "water",
+                "sceneId": "405"
+            },
+            {
+                "description": "Narrow, twisting passage.",
+                "key": "narrow",
+                "sceneId": "415"
+            }
+        ],
+        "fileDescription": true,
+        "id": "14.1",
+        "nextScene": null,
+        "spawns": null
+    },
+    "15": {
+        "conditions": [
+            {
+                "attribute": "stamina",
+                "checkCondition": "add",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "4"
+            },
+            {
+                "attribute": "luck",
+                "checkCondition": "add",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "1"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "15",
+        "nextScene": "15.1",
+        "spawns": null
+    },
+    "15.1": {
+        "conditions": null,
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "15.1",
+        "nextScene": "500",
+        "spawns": null
+    },
+    "16": {
+        "conditions": null,
+        "enemies": [
+            {
+                "moveConditions": null,
+                "name": "GIANT COCKROACH",
+                "skill": "7",
+                "stamina": "6"
+            },
+            {
+                "moveConditions": null,
+                "name": "GIANT COCKROACH",
+                "skill": "6",
+                "stamina": "7"
+            }
+        ],
+        "exits": null,
+        "fileDescription": true,
+        "id": "16",
+        "nextScene": "16.1",
+        "spawns": null
+    },
+    "16.1": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Follow to the left.",
+                "key": "left",
+                "sceneId": "421"
+            },
+            {
+                "description": "Take another passage perpendicular to this one.",
+                "key": "another",
+                "sceneId": "282"
+            }
+        ],
+        "fileDescription": true,
+        "id": "16.1",
+        "nextScene": null,
+        "spawns": null
+    },
+    "17": {
+        "conditions": null,
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "17",
+        "nextScene": "245",
+        "spawns": null
+    },
+    "18": {
+        "conditions": null,
+        "enemies": [
+            {
+                "moveConditions": [
+                    {
+                        "attribute": "",
+                        "checkCondition": "greater",
+                        "nextScene": "30",
+                        "type": "consWinAttack",
+                        "value": "3"
+                    },
+                    {
+                        "attribute": "combatTurn",
+                        "checkCondition": "equal",
+                        "nextScene": "99",
+                        "type": "attributeCheck",
+                        "value": "7"
+                    },
+                    {
+                        "attribute": "",
+                        "checkCondition": "",
+                        "nextScene": "113",
+                        "type": "win",
+                        "value": ""
+                    }
+                ],
+                "name": "SHUCK",
+                "skill": "7",
+                "stamina": "7"
+            }
+        ],
+        "exits": null,
+        "fileDescription": true,
+        "id": "18",
+        "nextScene": null,
+        "spawns": null
+    },
+    "19": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Follow the mangy beggar.",
+                "key": "follow",
+                "sceneId": "59"
+            },
+            {
+                "description": "Prepare to face whatever is comming.",
+                "key": "prepare",
+                "sceneId": "172"
+            },
+            {
+                "description": "Hide without the beggar's help.",
+                "key": "hide",
+                "sceneId": "204"
+            }
+        ],
+        "fileDescription": true,
+        "id": "19",
+        "nextScene": null,
+        "spawns": null
+    },
+    "2": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Throw the Silver Dagger at the monster.",
+                "key": "throw",
+                "sceneId": "67"
+            },
+            {
+                "description": "Keep a tight hold on it.",
+                "key": "keep",
+                "sceneId": "162"
+            }
+        ],
+        "fileDescription": true,
+        "id": "2",
+        "nextScene": null,
+        "spawns": null
+    },
+    "20": {
+        "conditions": [
+            {
+                "attribute": "skill",
+                "checkCondition": "addp",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "1"
+            },
+            {
+                "attribute": "stamina",
+                "checkCondition": "addp",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "2"
+            },
+            {
+                "attribute": "change",
+                "checkCondition": "add",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "1"
+            },
+            {
+                "attribute": "",
+                "checkCondition": "",
+                "sourceDescription": "51-248-469-106-305-354",
+                "type": "diceRoll",
+                "value": "1"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "20",
+        "nextScene": null,
+        "spawns": null
+    },
+    "3": {
+        "conditions": [
+            {
+                "attribute": "change",
+                "checkCondition": "add",
+                "sourceDescription": "",
+                "type": "statChange",
+                "value": "1"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "3",
+        "nextScene": "3.1",
+        "spawns": null
+    },
+    "3.1": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Accept the Master's Offer.",
+                "key": "accept",
+                "sceneId": "15"
+            },
+            {
+                "description": "Decline.",
+                "key": "decline",
+                "sceneId": "509"
+            }
+        ],
+        "fileDescription": true,
+        "id": "3.1",
+        "nextScene": null,
+        "spawns": null
+    },
+    "4": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Pay the fee and enter the Carnivale now.",
+                "key": "pay",
+                "sceneId": "134"
+            },
+            {
+                "description": "Wait until dark and enter under the cover of the night.",
+                "key": "wait",
+                "sceneId": "238"
+            },
+            {
+                "description": "Do nothing and leave this place.",
+                "key": "leave",
+                "sceneId": "26"
+            }
+        ],
+        "fileDescription": true,
+        "id": "4",
+        "nextScene": null,
+        "spawns": null
+    },
+    "5": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Depart without futher delay.",
+                "key": "depart",
+                "sceneId": "38"
+            },
+            {
+                "description": "Investigate futher.",
+                "key": "investigate",
+                "sceneId": "249"
+            }
+        ],
+        "fileDescription": true,
+        "id": "5",
+        "nextScene": null,
+        "spawns": null
+    },
+    "6": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Spend what remains of the night at Giblet Tree.",
+                "key": "stay",
+                "sceneId": "131"
+            },
+            {
+                "description": "Risk a night out the under the stars.",
+                "key": "risk",
+                "sceneId": "466"
+            }
+        ],
+        "fileDescription": true,
+        "id": "6",
+        "nextScene": null,
+        "spawns": null
+    },
+    "7": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "Crypt.",
+                "key": "crypt",
+                "sceneId": "297"
+            },
+            {
+                "description": "Cellar.",
+                "key": "cellar",
+                "sceneId": "138"
+            },
+            {
+                "description": "Ground floor.",
+                "key": "ground",
+                "sceneId": "126"
+            },
+            {
+                "description": "First floor.",
+                "key": "first",
+                "sceneId": "187"
+            },
+            {
+                "description": "Second floor.",
+                "key": "second",
+                "sceneId": "217"
+            },
+            {
+                "description": "Third floor.",
+                "key": "third",
+                "sceneId": "348"
+            },
+            {
+                "description": "Fourth floor.",
+                "key": "fourth",
+                "sceneId": "284"
+            },
+            {
+                "description": "Fifth floor.",
+                "key": "fifth",
+                "sceneId": "408"
+            },
+            {
+                "description": "Sixth floor.",
+                "key": "sixth",
+                "sceneId": "435"
+            },
+            {
+                "description": "Seventh floor.",
+                "key": "seventh",
+                "sceneId": "273"
+            }
+        ],
+        "fileDescription": true,
+        "id": "7",
+        "nextScene": null,
+        "spawns": null
+    },
+    "8": {
+        "conditions": [
+            {
+                "attribute": "change",
+                "checkCondition": "lessOrEqual",
+                "sourceDescription": "",
+                "type": "roll",
+                "value": "64-161"
+            }
+        ],
+        "enemies": null,
+        "exits": null,
+        "fileDescription": true,
+        "id": "8",
+        "nextScene": null,
+        "spawns": null
+    },
+    "9": {
+        "conditions": null,
+        "enemies": null,
+        "exits": [
+            {
+                "description": "To the tunnel from where emanates a musky animal smell.",
+                "key": "tunnel",
+                "sceneId": "435"
+            },
+            {
+                "description": "To the cobweb passageway.",
+                "key": "cobweb",
+                "sceneId": "415"
+            },
+            {
+                "description": "To the white quartz tunnel.",
+                "key": "quartz",
+                "sceneId": "70"
+            }
+        ],
+        "fileDescription": true,
+        "id": "9",
+        "nextScene": null,
+        "spawns": null
+    },
+    "1": {
+		"id": "1",
+		"name": "First Scene",
+		"description": "",
+		"fileDescription": true,
+		"nextScene": "1.1"
+	},
+	"1.1": {
+		"id": "1.1",
+		"name": "Opening scene",
+		"description": "With the wolf pack sleadily closing in on you, and the great wolf tensed ready to attack in an instant, you are going to have to act fast and use all your cunning if you are ever going to get out of this dire situation alive.\nWill you:",
+		"fileDescription": false,
+		"exits": [
+			{
+				"id": 1,
+				"description": "Turn your back on the wolf and try to run for it",
+				"key": "run",
+				"sceneId": "43"
+			},
+			{
+				"id": 2,
+				"description": "Stand your ground and prepare to meet the Black Wolf's inevitable attack",
+				"key": "attack",
+				"sceneId": "66"
+			},
+			{
+				"id": 3,
+				"description": "Seize the initiative and charge the wolf",
+				"key": "charge",
+				"sceneId": "147"
+			}
+		],
+		"objects": []
+    },
+    "0": {
+		"id": "0",
+		"name": "First Scene",
+		"description": "Text",
+		"fileDescription": false,
+		"nextScene": "1.1"
+	}
+}

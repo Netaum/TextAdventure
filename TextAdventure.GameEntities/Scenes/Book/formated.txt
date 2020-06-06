@@ -1,0 +1,278 @@
+[2:
+Sharpness? Silverness? She must be talking about the Silver Dagger you found on body of the goblin thief.
+Quickly you take out the gleaming blade.
+The Spider-Queen's eyes practically bulge out of her head as the eight black orbs catch sight of the dagger glittering in the light of the crystal formations.
+'My sharpness! My pretty silverness!' she shrieks.
+'Give it to me, thief.'
+'Or shall I have to take it from you?'
+She stalks towards you over the desiccated husks of men and dwarfs that litter the floor of her chamber.
+{
+-q:Throw the Silver Dagger at the monster.(throw:67)
+-q:Keep a tight hold on it.(keep:162)
+}]
+//type:checkCondition:attribute:value:sourceDescription
+[3:
+Inexplicably, something starts to claw at you inside your chest — at least that's what it feels like.
+You cry out in pain as you double up, but the cry that comes from your throat is more like a lupine howl; and that's not all! 
+You can feel fur bristling your face and it appearing on the backs of your hands, while the tip your ears stretch and reshape themselves.
+{
+-c:(statChange:add:change:1:)
+-n:3.1
+}]
+[3.1:
+The gathered circus folk gasp and take a step back, apart from the Master.
+'Ah' he muses, 'a wolfman'.
+We haven't got one of those.
+You stare at him in amazument; this is not the reaction you would have expected.
+'We all have our secrets, do we not?' the Master says, givig you a wicked grin.
+'But I think we might have a place for you, within our Carnivale — that is, if you would like to join us.
+{
+-q:Accept the Master's Offer.(accept:15)
+-q:Decline.(decline:509)
+}]
+[4:
+Hans, the young man you met at The Gibbet Tree, said sister Leisel had run away to join the Carnivale.
+It surely can't be a coincidence, this must be the travelling circus he was talking about.
+You remember Hans' words clearly: 'weird, grotesquee and macabre' was how he described it.
+You have to admitd tha you are intrigued.
+{
+-q:Pay the fee and enter the Carnivale now.(pay:134)
+-q:Wait until dark and enter under the cover of the night.(wait:238)
+-q:Do nothing and leave this place.(leave:26)
+}]
+
+[5:
+You do not have to walk far to reach the ruins.
+With the dusk deepening around you, you begin to explore them by twilight.
+You pass between crumbling stone walls — whatever roof they might once have supported long gone — and beneath broken arches into dirt floored chambers open to the sky, home now to scurrying beetles, centipedes and vermin.
+Who built this place — you find yourself wondering — and what went on here ? 
+Were these ruins once some lord's stronghold, a sorcerers hideaway, or holy temple dedicated to a now-forgotten deity? 
+There is one thing you are certain of, however.
+Evil holds dominion here now.
+Lurking shadows seem change and move.
+The longer you explore thee ruins, the more intense the feeling become that there is evil lingering within this place, and it is making you feel increasingly uncomfortable.
+{
+-q:Depart without futher delay.(depart:38) 
+-q:Investigate futher.(investigate:249)
+}] 
+
+[6:
+Lifting the latch, you push open the heavy door of Thee Giblet Tree.
+The inn sign, which depicts an empty gallows scaffold and swinging noose, creaks rustily in the night-breeze above you.
+Shutting door, you enter the bar room beyond.
+It is relatively large, with a number of tables and chairs dotted around, but other than you, there appears to be only one other customer; a young man with an intensely serious expression on his face.
+The last embers Of a fire smoulder in the grate, which is set into a large chimney breast.
+Standing behind the bar is a blubbery, bald-headed man whom you take to be the landlord, lugubriously rubbing a tankard with the skirts of his filthy apron, and a girl of no more than eighteen or nineteen, whose black hair is an unkempt mess, her vacant eyes staring into the dying coals of the fire.
+No one speaks, making then whining of the wind in the leaves even more unsettling.
+A night at an inn such as this shouldn't cost more than couple of Gold Pieces, but you can imagine you would receive a warmer welcome from a pack of snow wolves in the Cloudcap Mounains in mid-winter.
+{
+-q:Spend what remains of the night at Giblet Tree.(stay:131)
+-q:Risk a night out the under the stars.(risk:466)
+}]
+
+[7:
+Being mindful not to return to anywhere you have already been, which floor will you now explore?
+{
+-q:Crypt.(crypt:297)
+-q:Cellar.(cellar:138)
+-q:Ground floor.(ground:126)
+-q:First floor.(first:187)
+-q:Second floor.(second:217)
+-q:Third floor.(third:348)
+-q:Fourth floor.(fourth:284)
+-q:Fifth floor.(fifth:408)
+-q:Sixth floor.(sixth:435)
+-q:Seventh floor.(seventh:273)
+}]
+
+[8:
+Leaving Strigoiva, you make your way towards the dark spur of trees that delineates the outermost extend of the forest. 
+Gnarled and twisted trees arch over the path between them, forming a foliaged tunnel that leads into the depths of the woods. 
+Between the crowded and clutching branches, the forest is as dark as at dusk.
+Occasionally you hear the twitter of birdsong or the distant shriek of a forest animal, but you see nothing.
+The forest has an uncanny quality to it that unnwecwa you.
+It has all the atmosphere of rhw Woodlands of fairy tales and folk-lore.
+The dimming of the half-light that penetrates this far beneath the trees tells you that rught is on its way.
+A clearing opens before you and you find yourself looking at the mirror-black surface of a woodland pool.
+Traces of water-weed trail the surface amid patches of thick, slime-green algae.
+The pool is a good hundred meters across but in the twilight you can see that the straggly path you following wends its way around the edge of the lake to the far side.
+As you prepare to set off again, the sound of singing drifts to your ears over the water.
+It is a lilting, wordless tune that speaks to you of melancholic loneliness and a deep, dark sorrow.
+{
+-c:(roll:lessOrEqual:change:64-161:)
+}]
+
+[9:
+Following the tunne throught the peak you come to a smaller cave from which a total of three routes leads onwards
+How will you progress now?
+{
+-q:To the tunnel from where emanates a musky animal smell.(tunnel:435)
+-q:To the cobweb passageway.(cobweb:415)
+-q:To the white quartz tunnel.(quartz:70)
+}]
+
+[10:
+Staring into the Countess' eyes and enraptured by the mesmerising tone of her voice, you forget why you came to Maun Tower in the first place.
+Suddenly all that matters is what the Lady is telling you: 
+"You will be my agent of destruction."
+"I know what you desire, and I desire it too.""
+"Hunt down the wolf and slay it.""
+Her manservant is suddenly at her side, a small, teak chest, open in his hands.
+Inside, lying on a bed of black velvet is an ornate Silver Dagger.
+'Take this,' the Countess says, as her Servant offers you the blade, 'and if you succeed in your quest, I shall reward you beyond your wildest dreams.'
+Acting as if all free will has left you, you take the Silver Dagger.
+'Now go', the Countess commands, and you leave her tower.
+Passing through Maun you head north into the hills.
+{
+-c:(inventory:add:item:Silver Dagger:)
+-c:(codeword:add:code:Deliugeb:) 
+-n:350
+}]
+
+[11:
+By time you have trekked high into the hills to the dark, fortress-like structue, night has properly fallen and the moon holds dominion over the land once more.
+The path between the peaks climbs a rocky escarpment, with a precipitous drop on one side and a sheer cliff on the other, until it finally stops in front of the stone-walled entrance to the building, the wall having been built acros a narrow pass between the peaks, so that they have been incorporated into the building.
+Beyond the rockface-wall, you can see the pointed gables and squat towers of another structure within the complex.
+You are Standing in front of a sturdy, and oak door.
+To one side, a tallow-fat lamp flickers within a tiny recess, and on the other side there hangs a knotted piece of rope that you take to be a bell pull.
+If you want to spend the night under shelter, you are going to have to gain access to the building, somehow.
+{
+-q:Ring the bell.(ring:58)
+-q:Look for another possible way.(look:23)
+}]
+//type:checkCondition:attribute:value:sourceDescription
+[12:
+After half an hour of searching and with beads of feverish sweat prickling your brow despite the cold, Ulrich suddenly cries out, 'Over here! I've found it!'
+You hurry to the spot where the woodsman is standing beside the bole of an aging oak.
+Growing there is the plant known as belladonna, or deadly nightshade, the herb you have been so desperately looking.
+Quickly you pick a handful of sprigs and pop them into your mouth.
+But belladonna is poisonous and eating somemakes you sick.
+{
+-c:(damage:::2:the belladonna poison.)
+-n:12.1
+}]
+[12.1:
+By doing so, however, you have also slowed the advance ef the lycanthropy throughout your system.
+{
+-c:(statChange:subtract:change:1:)
+-n:12.2
+}]
+[12.2:
+Yet, despite this, some sixth sense tells you that it hasn't been enough to rid you of your affliction altogether.
+Unless you find another, more effective cure, you are still going to turn into a wolf the next time the moon is full.
+{
+-q:Go after the wolf pack.(go:473)
+-q:Search Grandmother Zekova.(search:302)
+}]
+
+[13:
+You spend a restless night in your room, kept awake by strange and disturbing noises that fill you with a sense of dread.
+There is the clattering of hooves on cobbles, shrill whinnying, crazed cackling laughter, and the moaning of an unearthly gale.
+Come the morning, you feel just as tired as you did on retiring to bed and in your weakened state, your inner wolf gains a greater hold on your body 
+{
+-c:(statChange:add:change:1:)
+-n:13.1
+}]
+[13.1:
+You leave The Gibbet Tree without seeing another soul and set off again along the road north across the moors.
+{
+-n:69
+}]
+
+[14:
+Emerging from the tunnel, you enter a vast chamber - a natural stone cathedral deep within the rock of Sundered Peak.
+Hanging amid the stalactites suspended from the roof of the cavern are pendulous, silk-wrapped egg-sacs, like those made by spiders, although each of these is as big as a treasure chest.
+As you cross the chamber, you detect movement above you.
+Looking up into the gloom you see several of the scas split open and the giant spider hatchlings emerge.
+Each has a distinctive set of markings on its abdomen, in the form of a grinning Death's Head, and each hatches with the instinctive desire to hunt!
+{
+-s:(spiders:1:1:6:2:14.1:GIANT SPIDER HATCHLING)
+}]
+
+[14.1:
+After the battle, witch route will you take out of the vast cavern.
+{
+-q:Wide, circular tunnel.(circular:122)
+-q:Tunnel with its walls running with water.(water:405)
+-q:Narrow, twisting passage.(narrow:415)
+}]
+
+[15:
+You spend the next two days in the pleasant company of the Camivale folk as they break camp and set off along rhe road east out of Balci.
+You feel rested and refreshed, and more positive about your whole situation.
+The unsettling transformation you under went also reversed itself come dawn the next day.
+{
+-c:(statChange:add:stamina:4:)
+-c:(statChange:add:luck:1:)
+-n:15.1
+}]
+
+[15.1:
+Another day on road brings you to he town Of Vargenhof.
+As circus folk start setting up for another series of shows, you thank the Carnivale Master for his generosity of spirit but tell him that you must be on your way, so wander off into the town.
+{
+-n:500
+}]
+
+//e:(Name:Skill:Stamina)
+[16:
+You come to lying in a cold stone cell, lit by a single flickering oil-lamp.
+Awareness returns more quicklyas you hear a disconcerting chirruping sound.
+You are not alone m the cell.
+Between you and the cell door scuttle two grotesquely overgrown cockroaches.
+Sawing their antennae together they move towards you.
+{
+-e:(GIANT COCKROACH:7:6)
+-e:(GIANT COCKROACH:6:7)
+-n:16.1
+}]
+
+[16.1:
+After you defeat the Ccxkroaches, you manage to break the rusted lock of the cell door and, opening it, find yourself in a subterranean passageway.
+To your right the corridor comes to a dead end.
+{
+-q:Follow to the left.(left:421)
+-q:Take another passage perpendicular to this one.(another:282)
+}]
+
+[17:
+Brandishing the holy symbol in front of the Vampiress causes her to recoil, throwing her hands up in front of her face, spitting like a wildcat.
+{
+-n:245
+}]
+
+//-ec:enemy move condition(type,attribute,checkCondition,value,nextscene)
+[18:
+The savage Shuck is upon you.
+This demon dog has terrorised would-be pilgrirns making the journey to the healing shrine of Saint Crucius for long enough.
+Tonight, its reign of terror must come to an end.
+{
+-e:(SHUCK:7:7)
+-ec:(consWinAttack::greater:3:30)
+-ec:(attributeCheck:combatTurn:equal:7:99)
+-ec:(win::::113)
+}]
+
+[19:
+The people of Wulfenstein have locked and barred their doors and windows, hiding from whatever it isthat is making the dreadful, growling you can hear echoing along the village streets.
+Your hackles rise, your wolfish senses recoiling in the presence of something bestial and malign.
+As you creep throug the eerily empty sheets, you hear panting and the scrape of claws on cobblestones.
+Shadows loom around a street comer...
+Something is comming
+It is at that moment that a gaunt old man sticks his wild haired head out from an alleyway and beckons to you with a long-nailed finger.
+"Stranger, if you want to live, come with me".
+{
+-q:Follow the mangy beggar.(follow:59)
+-q:Prepare to face whatever is comming.(prepare:172)
+-q:Hide without the beggar's help.(hide:204)
+}]
+
+[20:
+The lycanthropy is steadily spreading throughout your body and changes are being wrought at the core of your being.
+In fact, perversely the curse of the werewolf is making you physically stronger and more adept.
+{
+-c:(statChange:addp:skill:1:)
+-c:(statChange:addp:stamina:2:)
+-c:(statChange:add:change:1:)
+-c:(diceRoll:::1:51-248-469-106-305-354)
+}]
