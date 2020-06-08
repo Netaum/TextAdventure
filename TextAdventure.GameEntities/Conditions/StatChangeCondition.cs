@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using TextAdventure.Common.Tools;
 using TextAdventure.Interfaces;
 using TextAdventure.Interfaces.Enums;
 
 namespace TextAdventure.GameEntities.Conditions
 {
-    public class StatChangeCondition: Condition, ICondition
+	public class StatChangeCondition: Condition, ICondition
     {
         public StatChangeCondition(string attribute,
                                    string checkCondition,

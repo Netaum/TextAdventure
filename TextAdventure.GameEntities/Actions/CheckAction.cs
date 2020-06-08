@@ -20,6 +20,7 @@ namespace TextAdventure.GameEntities.Actions
 			{
 				controller.ShowEnemy(enemyNumber);
 			}
+
 			if(verb == "enemies")
 			{
 				controller.ShowEnemies();
