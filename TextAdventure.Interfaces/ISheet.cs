@@ -19,6 +19,6 @@ namespace TextAdventure.Interfaces
         string PrintSheet();
         string PrintInventory();
         string PrintStats();
-		void ChangeStat(Attributes stat, int value);
+		void ChangeStat(Stats stat, int value);
 	}
 }

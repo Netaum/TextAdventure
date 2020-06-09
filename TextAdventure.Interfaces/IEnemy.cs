@@ -1,14 +1,15 @@
 using System.Collections.Generic;
+using TextAdventure.Interfaces.Enums;
 
 namespace TextAdventure.Interfaces
 {
-    public interface IEnemy
+	public interface IEnemy
 	{
 		string Name { get; }
 		int Skill { get; }
 		int Stamina { get; }
 		int CombatTurn { get; }
-		// type of enemy
+		EnemyType EnemyType { get; }
 		IList<ICondition> MoveConditions { get; }
 		void CheckConditions(IGameController controller);
 		int GetAttack();

@@ -24,11 +24,11 @@ namespace TextAdventure.GameEntities.Tests.Conditions
 											 int attributeValue,
 											 int attributeShould)
 		{
-			Interfaces.Enums.Attributes attribute;
+			Interfaces.Enums.Stats attribute;
 			int statValue = 0;
 
-			controllerMock.Setup(s => s.Player.ChangeStat(It.IsAny<Interfaces.Enums.Attributes>(), It.IsAny<int>()))
-						  .Callback<Interfaces.Enums.Attributes, int>((stat, value) => 
+			controllerMock.Setup(s => s.Player.ChangeStat(It.IsAny<Interfaces.Enums.Stats>(), It.IsAny<int>()))
+						  .Callback<Interfaces.Enums.Stats, int>((stat, value) => 
 						  {
 							  attribute = stat;
 							  statValue = value;

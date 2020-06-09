@@ -16,7 +16,7 @@ namespace TextAdventure.Interfaces
 		IResponseAction TryUseItem(string item);
 		void AttackEnemy(IEnemy enemy);
 		void ReceiveDamage(int damage = 2, string source = null);
-		void ChangeStat(Attributes stat, int value);
+		void ChangeStat(Stats stat, int value);
 
 		void AddItemToInventory(string itemName);
 		void RemoveItemFromInventory(string itemName);

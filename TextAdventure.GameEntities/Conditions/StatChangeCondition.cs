@@ -11,7 +11,7 @@ namespace TextAdventure.GameEntities.Conditions
                                    string value)
         {
             Type = nameof(StatChangeCondition);
-            Attribute = Tools.ParseEnum<Attributes>(attribute);
+            Attribute = Tools.ParseEnum<Stats>(attribute);
             CheckCondition = Tools.ParseEnum<CheckCondition>(checkCondition);
             Value = value;
         }

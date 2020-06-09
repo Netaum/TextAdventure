@@ -1,6 +1,6 @@
 namespace TextAdventure.Interfaces.Enums
 {
-    public enum Attributes
+    public enum Stats
     {
         Skill,
         Stamina,

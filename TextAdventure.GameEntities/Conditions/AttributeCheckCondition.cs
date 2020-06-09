@@ -13,7 +13,7 @@ namespace TextAdventure.GameEntities.Conditions
                                        string nextScene)
         {
             Type = nameof(AttributeCheckCondition);
-            Attribute = Tools.ParseEnum<Attributes>(attribute);
+            Attribute = Tools.ParseEnum<Stats>(attribute);
             CheckCondition = Tools.ParseEnum<CheckCondition>(checkCondition);
             Value = value;
             NextScene = nextScene;
@@ -30,13 +30,13 @@ namespace TextAdventure.GameEntities.Conditions
             int attributeValue = 0;
             switch(Attribute)
             {
-                case Attributes.CombatTurn:
+                case Stats.CombatTurn:
                     attributeValue = enemy.CombatTurn;
                     break;
-                case Attributes.Stamina:
+                case Stats.Stamina:
                     attributeValue = enemy.Stamina;
                     break;
-                case Attributes.Skill:
+                case Stats.Skill:
                     attributeValue = enemy.Skill;
                     break;
             }

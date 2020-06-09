@@ -52,22 +52,22 @@ namespace TextAdventure.Common.Tests.Tools
 		public void ParseActionShouldNotWork(string action)
 		{
 			var result = ParseTool.Tools.ParseAction(action);
-			Assert.Equal(result, null);
+			Assert.Null(result);
 		}
 
 		[Theory]
-		[InlineData("change", Attributes.Change)]
-		[InlineData("code", Attributes.Code)]
-		[InlineData("combatTurn", Attributes.CombatTurn)]
-		[InlineData("gold", Attributes.Gold)]
-		[InlineData("item", Attributes.Item)]
-		[InlineData("luck", Attributes.Luck)]
-		[InlineData("provision", Attributes.Provision)]
-		[InlineData("skill", Attributes.Skill)]
-		[InlineData("stamina", Attributes.Stamina)]
-		public void ParseAttributeShouldWork(string attribute, Attributes attributeExpected)
+		[InlineData("change", Stats.Change)]
+		[InlineData("code", Stats.Code)]
+		[InlineData("combatTurn", Stats.CombatTurn)]
+		[InlineData("gold", Stats.Gold)]
+		[InlineData("item", Stats.Item)]
+		[InlineData("luck", Stats.Luck)]
+		[InlineData("provision", Stats.Provision)]
+		[InlineData("skill", Stats.Skill)]
+		[InlineData("stamina", Stats.Stamina)]
+		public void ParseAttributeShouldWork(string attribute, Stats attributeExpected)
 		{
-			var result = ParseTool.Tools.ParseEnum<Attributes>(attribute);
+			var result = ParseTool.Tools.ParseEnum<Stats>(attribute);
 			Assert.Equal(result, attributeExpected);
 		}
 
@@ -76,7 +76,7 @@ namespace TextAdventure.Common.Tests.Tools
 		[InlineData("blabla")]
 		public void ParseAttributeShouldThrowException(string attribute)
 		{
-			Assert.Throws<ArgumentException>(() => ParseTool.Tools.ParseEnum<Attributes>(attribute));
+			Assert.Throws<ArgumentException>(() => ParseTool.Tools.ParseEnum<Stats>(attribute));
 		}
 
 		[Theory]

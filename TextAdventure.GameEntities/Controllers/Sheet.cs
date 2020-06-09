@@ -15,7 +15,6 @@ namespace TextAdventure.GameEntities.Controllers
 		private int originalSkill;
 		private int originalStamina;
 		private int originalLuck;
-
 		public int Skill { get; private set; }
 		public int Stamina { get; private set; }
 		public int Luck { get; private set; }
@@ -154,32 +153,32 @@ namespace TextAdventure.GameEntities.Controllers
 			Stamina -= damageReceived;
 		}
 
-		public void ChangeStat(Attributes stat, int value)
+		public void ChangeStat(Stats stat, int value)
 		{
 			switch(stat)
 			{
-				case Attributes.Skill:
+				case Stats.Skill:
 					Skill += value;
 					if(Skill > originalSkill)
 						Skill = originalSkill;
 					break;
-				case Attributes.Stamina:
+				case Stats.Stamina:
 					Stamina += value;
 					if(Stamina > originalStamina)
 						Stamina = originalStamina;
 					break;
-				case Attributes.Luck:
+				case Stats.Luck:
 					Luck += value;
 					if(Luck > originalLuck)
 						Luck = originalLuck;
 					break;
-				case Attributes.Gold:
+				case Stats.Gold:
 					Gold += value;
 					break;
-				case Attributes.Provision:
+				case Stats.Provision:
 					Provisions += value;
 					break;
-				case Attributes.Change:
+				case Stats.Change:
 					Change += value;
 					break;
 			}

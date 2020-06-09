@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Text;
 using TextAdventure.Interfaces;
+using TextAdventure.Interfaces.Enums;
 
 namespace TextAdventure.GameEntities.Conditions
 {
@@ -11,6 +12,7 @@ namespace TextAdventure.GameEntities.Conditions
 		public int Stamina { get; private set; }
 		public int CombatTurn { get; private set; }
 		public IList<ICondition> MoveConditions { get; private set; }
+		public EnemyType EnemyType { get; private set; }
 
 		public Enemy(string name,
 					 int skill,

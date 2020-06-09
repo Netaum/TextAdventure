@@ -1,14 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using TextAdventure.Common.Tools;
 using TextAdventure.GameEntities.Controllers;
+using TextAdventure.GameEntities.Converters;
+using TextAdventure.GameEntities.Items;
 using TextAdventure.GameEntities.Scenes;
+using TextAdventure.Interfaces;
 
 namespace TextAdventure.ConsoleApp
 {
 	class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
+		{
+			var file = Tools.ReadFile("/Files/items.json");
+			var settings = new JsonSerializerSettings
+			{
+				ContractResolver = new DefaultContractResolver(),
+			};
+			settings.Converters.Add(new InteractableObjectConverter());
+			settings.Converters.Add(new InteractionConverter());
+
+			var items = JsonConvert.DeserializeObject<List<InteractableObject>>(file, settings);
+		}
+		static void Main1(string[] args)
 		{
 			var scenes = SceneBuilder.LoadScenes();
             var controller = new GameController(scenes);

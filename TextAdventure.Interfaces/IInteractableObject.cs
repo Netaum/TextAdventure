@@ -8,7 +8,6 @@ namespace TextAdventure.Interfaces
 		string Name { get; set; }
 		string Description { get; set; }
 		IList<IInteraction> Interactions { get; }
-
 		IInteraction GetInteraction(Actions action);
 	}
 }

@@ -119,7 +119,7 @@ namespace TextAdventure.GameEntities.Controllers
 			controller.DisplayText(builder.ToString());
 
 		}
-		public void ChangeStat(Attributes stat, int value)
+		public void ChangeStat(Stats stat, int value)
 		{
 			string changed = value > 0 ? "increased" : "decreased";
 			Sheet.ChangeStat(stat, value);

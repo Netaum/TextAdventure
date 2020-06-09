@@ -6,7 +6,7 @@ namespace TextAdventure.GameEntities.Conditions
     public abstract class Condition : ICondition
     {
         public string Type { get; protected set; }
-        public Attributes Attribute { get; protected set; }
+        public Stats Attribute { get; protected set; }
         public CheckCondition CheckCondition { get; protected set; }
         public string Value { get; protected set; }
         public string NextScene { get; protected set; }
