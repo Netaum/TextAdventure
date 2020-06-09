@@ -2,12 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using TextAdventure.Common.Tools;
-using TextAdventure.Interfaces;
+using TextAdventure.Interfaces.Controllers;
+using TextAdventure.Interfaces.Entities;
 using TextAdventure.Interfaces.Enums;
+using TextAdventure.Interfaces.Scenes;
 
 namespace TextAdventure.Entities
 {
-	public class Player
+	public class Player : IPlayer
 	{
 		private IList<Stats> originalStats = new List<Stats> { Stats.Stamina, Stats.Luck, Stats.Skill };
 		private IDictionary<Stats, PropertyInfo> properties;
@@ -26,8 +28,8 @@ namespace TextAdventure.Entities
 		public IScene CurrentScene { get; private set; }
 		public IList<string> CodeWords { get; private set; }
 		public IList<string> NotesClues { get; private set; }
-		public IList<TextAdventure.Entities.IInteractableObject> Inventory { get; private set; }
-		public IDictionary<EquipmentType, TextAdventure.Entities.IInteractableObject> Equipment { get; private set; }
+		public IList<IInteractableObject> Inventory { get; private set; }
+		public IDictionary<EquipmentType, IInteractableObject> Equipment { get; private set; }
 
 		public Player(IGameController controller,
 					  bool testChar = false)
@@ -35,8 +37,8 @@ namespace TextAdventure.Entities
 			this.controller = controller;
 			CodeWords = new List<string>();
 			NotesClues = new List<string>();
-			Inventory = new List<TextAdventure.Entities.IInteractableObject>();
-			Equipment = new Dictionary<EquipmentType, TextAdventure.Entities.IInteractableObject>();
+			Inventory = new List<IInteractableObject>();
+			Equipment = new Dictionary<EquipmentType, IInteractableObject>();
 
 			var type = this.GetType();
 
@@ -113,7 +115,7 @@ namespace TextAdventure.Entities
 			return true;
 		}
 
-		public IResponseAction TryDoActionOnItem(Actions action, string itemName)
+		public Interfaces.IResponseAction TryDoActionOnItem(PlayerCommands action, string itemName)
 		{
 			var item = Inventory.FirstOrDefault(f => f.Name == itemName);
 			if (item == null)
@@ -144,34 +146,34 @@ namespace TextAdventure.Entities
 			int enemyDamage = 2;
 			return (enemyDamage, AttackResult.EnemyDamagesPlayer);
 		}
-		
+
 		public bool ReceiveDamage(int damage)
 		{
 			Stamina -= damage;
 			return Stamina <= 0;
 		}
-		
+
 		public void DecreaseStat(int value, Stats stat)
 		{
 			var prop = properties[stat];
 			var newValue = ((int)prop.GetValue(this)) - value;
 			prop.SetValue(this, newValue);
 		}
-		
+
 		public void IncreaseStat(int value, Stats stat)
 		{
 			var prop = properties[stat];
-			var propValue = (int) prop.GetValue(this);
+			var propValue = (int)prop.GetValue(this);
 			int newValue = propValue + value;
 
-			if(originalStats.Contains(stat))
+			if (originalStats.Contains(stat))
 			{
 				var original = originalProperties[stat];
-				int originalValue = (int) original.GetValue(this);
-				if(newValue > originalValue)
+				int originalValue = (int)original.GetValue(this);
+				if (newValue > originalValue)
 					newValue = originalValue;
 			}
-			if(newValue != propValue)
+			if (newValue != propValue)
 				prop.SetValue(this, newValue);
 		}
 
@@ -180,7 +182,7 @@ namespace TextAdventure.Entities
 		{
 			return Skill + Common.Tools.StaticRandom.RollDice(2);
 		}
-		
+
 		private int GetDamage(IEnemy enemy)
 		{
 			Equipment.TryGetValue(EquipmentType.Weapon, out var item);
@@ -192,7 +194,7 @@ namespace TextAdventure.Entities
 
 			return item.Damages[EnemyType.Default];
 		}
-		
+
 		private void CreateNewChar(int? skillValue = null,
 								   int? staminaValue = null,
 								   int? luckValue = null,
@@ -220,6 +222,6 @@ namespace TextAdventure.Entities
 			CreateNewChar(3, 3, 3, 10);
 		}
 
-		
+
 	}
 }

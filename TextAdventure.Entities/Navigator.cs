@@ -1,10 +1,12 @@
 using System.Collections.Generic;
-using TextAdventure.Interfaces;
 using System.Linq;
+using TextAdventure.Interfaces.Controllers;
+using TextAdventure.Interfaces.Entities;
+using TextAdventure.Interfaces.Scenes;
 
 namespace TextAdventure.Entities
 {
-	public class Navigator
+	public class Navigator : INavigator
 	{
 		public IScene CurrentScene { get; private set; }
 		public IEnumerable<IScene> SceneExits
@@ -16,7 +18,6 @@ namespace TextAdventure.Entities
 		}
 		private IDictionary<string, IScene> sceneExits;
 		private IGameController controller;
-
 		public Navigator(IGameController controller)
 		{
 			this.controller = controller;
@@ -27,10 +28,14 @@ namespace TextAdventure.Entities
 		{
 			CurrentScene = scene;
 			ClearSceneExits();
+			UnpackScene();
 		}
 
 		public void UnpackScene()
 		{
+			if (CurrentScene.Exits == null)
+				return;
+
 			foreach (var exit in CurrentScene.Exits)
 			{
 				sceneExits.Add(exit.Key, exit.Scene);
@@ -42,6 +47,14 @@ namespace TextAdventure.Entities
 			return sceneExits.ContainsKey(action) ?
 				   sceneExits[action] :
 				   null;
+		}
+
+		public IScene GetExitFromCommand(string command)
+		{
+			if(!sceneExits.ContainsKey(command))
+				return null;
+			
+			return sceneExits[command];
 		}
 
 		private void ClearSceneExits()

@@ -1,7 +1,11 @@
 using System.Collections.Generic;
 using Moq;
-using TextAdventure.Interfaces;
+using TextAdventure.Interfaces.Controllers;
+using TextAdventure.Interfaces.Entities;
 using TextAdventure.Interfaces.Enums;
+using TextAdventure.Interfaces.Scenes;
+using IInteraction = TextAdventure.Interfaces.IInteraction;
+using IResponseAction = TextAdventure.Interfaces.IResponseAction;
 using Xunit;
 
 namespace TextAdventure.Entities.Tests
@@ -233,7 +237,7 @@ namespace TextAdventure.Entities.Tests
 		[Fact]
 		public void TryDoActionOnItem_EmptyInventory_ShouldReturnNull()
 		{
-			var result = player.TryDoActionOnItem(Actions.Use, "Item 01");
+			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.Null(result);
 		}
 
@@ -246,7 +250,7 @@ namespace TextAdventure.Entities.Tests
 
 			player.Inventory.Add(item1.Object);
 
-			var result = player.TryDoActionOnItem(Actions.Use, "Item 01");
+			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.Null(result);
 		}
 
@@ -257,12 +261,12 @@ namespace TextAdventure.Entities.Tests
 			item1.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			item1.Setup(s => s.GetInteraction(It.IsAny<Actions>()))
+			item1.Setup(s => s.GetInteraction(It.IsAny<PlayerCommands>()))
 				 .Returns((IInteraction)null);
 
 			player.Inventory.Add(item1.Object);
 
-			var result = player.TryDoActionOnItem(Actions.Use, "Item 01");
+			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.Null(result);
 		}
 
@@ -275,12 +279,12 @@ namespace TextAdventure.Entities.Tests
 			item1.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			item1.Setup(s => s.GetInteraction(It.IsAny<Actions>()))
+			item1.Setup(s => s.GetInteraction(It.IsAny<PlayerCommands>()))
 				 .Returns(interaction.Object);
 
 			player.Inventory.Add(item1.Object);
 
-			var result = player.TryDoActionOnItem(Actions.Use, "Item 01");
+			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.Null(result);
 		}
 
@@ -298,12 +302,12 @@ namespace TextAdventure.Entities.Tests
 			item1.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			item1.Setup(s => s.GetInteraction(It.IsAny<Actions>()))
+			item1.Setup(s => s.GetInteraction(It.IsAny<PlayerCommands>()))
 				 .Returns(interaction.Object);
 
 			player.Inventory.Add(item1.Object);
 
-			var result = player.TryDoActionOnItem(Actions.Use, "Item 01");
+			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.NotNull(result);
 		}
 

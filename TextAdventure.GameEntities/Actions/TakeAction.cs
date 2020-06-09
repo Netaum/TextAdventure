@@ -1,4 +1,4 @@
-using ActionEnum = TextAdventure.Interfaces.Enums.Actions;
+using ActionEnum = TextAdventure.Interfaces.Enums.PlayerCommands;
 using TextAdventure.Interfaces;
 
 namespace TextAdventure.GameEntities.Actions

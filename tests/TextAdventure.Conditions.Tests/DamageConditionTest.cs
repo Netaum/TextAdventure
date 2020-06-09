@@ -1,9 +1,7 @@
-using Castle.Components.DictionaryAdapter;
 using Moq;
-using TextAdventure.GameEntities.Conditions;
-using TextAdventure.Interfaces;
 using Xunit;
-using ICondition = TextAdventure.Interfaces.ICondition;
+using TextAdventure.Conditions;
+using TextAdventure.Interfaces.Controllers;
 
 namespace TextAdventure.GameEntities.Tests.Conditions
 {
@@ -26,7 +24,7 @@ namespace TextAdventure.GameEntities.Tests.Conditions
 			string damageReceived = string.Empty;
 			string description = string.Empty;
 
-			controllerMock.Setup(s => s.Player.ReceiveDamage(It.IsAny<int>(), It.IsAny<string>()))
+			controllerMock.Setup(s => s.DoDamageToPlayer(It.IsAny<int>(), It.IsAny<string>()))
 						  .Callback<int, string>((d, desc) => 
 						  {
 							  damageReceived = d.ToString();

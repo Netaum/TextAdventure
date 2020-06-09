@@ -3,7 +3,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using TextAdventure.Common.Tools;
 using TextAdventure.Interfaces;
-using ActionEnum = TextAdventure.Interfaces.Enums.Actions;
+using ActionEnum = TextAdventure.Interfaces.Enums.PlayerCommands;
 
 namespace TextAdventure.GameEntities.Scenes
 {

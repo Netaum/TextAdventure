@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TextAdventure.Interfaces\TextAdventure.Interfaces.csproj" />
+    <ProjectReference Include="..\TextAdventure.Entities\TextAdventure.Entities.csproj" />
+    <ProjectReference Include="..\TextAdventure.Common\TextAdventure.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

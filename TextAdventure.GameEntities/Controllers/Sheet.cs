@@ -71,14 +71,14 @@ namespace TextAdventure.GameEntities.Controllers
 
 			sword.Interactions.Add(new Interaction
 			{
-				Action = ActionEnum.Actions.Use,
+				Action = ActionEnum.PlayerCommands.Use,
 				ResponseDescription = "You rise your sword...",
 				Response = null
 			});
 
 			sword.Interactions.Add(new Interaction
 			{
-				Action = ActionEnum.Actions.Inspect,
+				Action = ActionEnum.PlayerCommands.Inspect,
 				ResponseDescription = "An old and battered sword. Can do some damage, maybe.",
 				Response = null
 			});

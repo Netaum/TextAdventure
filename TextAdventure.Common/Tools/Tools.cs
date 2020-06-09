@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using ActionEnum = TextAdventure.Interfaces.Enums.Actions;
+using ActionEnum = TextAdventure.Interfaces.Enums.PlayerCommands;
 
 namespace TextAdventure.Common.Tools
 {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using TextAdventure.Interfaces;
-using ActionEnum = TextAdventure.Interfaces.Enums.Actions;
+using ActionEnum = TextAdventure.Interfaces.Enums.PlayerCommands;
 
 namespace TextAdventure.GameEntities.Items
 {

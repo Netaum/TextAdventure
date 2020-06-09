@@ -4,7 +4,7 @@ using System.Text;
 using TextAdventure.GameEntities.Conditions;
 using TextAdventure.Interfaces;
 using TextAdventure.Interfaces.Enums;
-using ActionEnum = TextAdventure.Interfaces.Enums.Actions;
+using ActionEnum = TextAdventure.Interfaces.Enums.PlayerCommands;
 
 namespace TextAdventure.GameEntities.Controllers
 {

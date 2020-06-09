@@ -4,7 +4,7 @@ namespace TextAdventure.Interfaces
 {
     public interface IInputAction
 	{
-		Actions Command { get; }
+		PlayerCommands Command { get; }
 		void RespondToInput(IGameController controller, string[] commands);
 	}
 }

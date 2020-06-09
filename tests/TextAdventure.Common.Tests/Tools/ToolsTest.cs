@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using TextAdventure.Interfaces.Enums;
 using Xunit;
-using ActionEnum = TextAdventure.Interfaces.Enums.Actions;
+using ActionEnum = TextAdventure.Interfaces.Enums.PlayerCommands;
 using ParseTool = TextAdventure.Common.Tools;
 
 namespace TextAdventure.Common.Tests.Tools

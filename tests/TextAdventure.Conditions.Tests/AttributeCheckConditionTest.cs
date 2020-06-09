@@ -1,9 +1,9 @@
-using Castle.Components.DictionaryAdapter;
 using Moq;
-using TextAdventure.GameEntities.Conditions;
-using TextAdventure.Interfaces;
 using Xunit;
-using ICondition = TextAdventure.Interfaces.ICondition;
+using TextAdventure.Conditions;
+using TextAdventure.Interfaces.Controllers;
+using TextAdventure.Interfaces.Conditions;
+using TextAdventure.Interfaces.Entities;
 
 namespace TextAdventure.GameEntities.Tests.Conditions
 {

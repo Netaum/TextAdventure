@@ -1,6 +1,6 @@
 namespace TextAdventure.Interfaces.Enums
 {
-    public enum Actions
+    public enum PlayerCommands
     {
          Use,
          Go,
