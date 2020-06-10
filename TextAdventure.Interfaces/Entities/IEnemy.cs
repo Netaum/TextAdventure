@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using TextAdventure.Interfaces.Enums;
-using ICondition = TextAdventure.Interfaces.Conditions.ICondition;
-using IGameController = TextAdventure.Interfaces.Controllers.IGameController;
 
 namespace TextAdventure.Interfaces.Entities
 {
@@ -12,8 +10,8 @@ namespace TextAdventure.Interfaces.Entities
 		int Stamina { get; }
 		int CombatTurn { get; }
 		EnemyType EnemyType { get; }
-		IList<ICondition> MoveConditions { get; }
-		void CheckConditions(IGameController controller);
+		IList<Conditions.ICondition> CombatConditions { get; }
+		void CheckConditions(Controllers.IGameController controller);
 		int GetAttack();
 		void ReceiveDamage(int damageReceived = 2);
 		bool IsDead();

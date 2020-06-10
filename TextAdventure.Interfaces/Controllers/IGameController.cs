@@ -11,7 +11,9 @@ namespace TextAdventure.Interfaces.Controllers
 		void RemoveItemFromPlayer(string itemName);
 		void DoDamageToPlayer(int damage, string damageDescription);
 		void ChangePlayerStat(Stats stat, CheckCondition condition, int value);
+		void AddCodeword(string codeword);
 		bool PlayerHasItem(string itemName);
+		bool HasEnemies();
 		void PlayerAttackEnemy();
 		void StartScene();
 

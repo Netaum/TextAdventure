@@ -1,0 +1,6 @@
+{
+	"id": "1",
+	"name": "First Scene",
+	"description": "There is a huge moon in the sky.\nThe howl hunts me to the end.\nThere is no escape.",
+	"nextScene": "2"
+}

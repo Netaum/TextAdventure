@@ -48,7 +48,7 @@ namespace TextAdventure.Controllers
 			var exitDescription = GetExitsDescriptionInScene(scene);
 			var builder = new StringBuilder();
 
-			builder.AppendLine(scene.GetSceneDescription());
+			builder.AppendLine(scene.Description);
 			
 			if (!string.IsNullOrEmpty(objectDescription))
 				builder.AppendLine(objectDescription);

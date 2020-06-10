@@ -25,5 +25,12 @@ namespace TextAdventure.GameEntities.Tests.Actions
             action.RespondToInput(controllerMock.Object, null);
             Assert.True(called);
         }
+
+        [Fact]
+        public void CheckAllCommands()
+        {
+            var commands = InputCommand.GetAllCommands();
+            Assert.True(true);
+        }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using TextAdventure.Controllers.Converters;
 using TextAdventure.Interfaces.Controllers;
 using TextAdventure.Interfaces.Entities;
 using TextAdventure.Interfaces.Scenes;
@@ -29,12 +30,19 @@ namespace TextAdventure.Controllers
 					};
 				}
 
+				jsonSettings.Converters.Add(new ExitConverter());
+				jsonSettings.Converters.Add(new SceneConverter());
+				jsonSettings.Converters.Add(new InteractableObjectConverter());
+				jsonSettings.Converters.Add(new InteractionConverter());
+				jsonSettings.Converters.Add(new EnemyConverter());
+				jsonSettings.Converters.Add(new ConditionConverter());
+
 				return jsonSettings;
 			}
 		}
 		public IScene LoadScene(string sceneName)
 		{
-			var fileName = $"/Scenes/{sceneName}.json";
+			var fileName = $"/Scenes/json/{sceneName}.json";
 			var file = TextAdventure.Common.Tools.Tools.ReadFile(fileName);
 			return JsonConvert.DeserializeObject<IScene>(file, Instance);
 		}

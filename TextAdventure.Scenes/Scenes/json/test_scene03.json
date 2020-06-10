@@ -1,0 +1,14 @@
+{
+	"id": "271",
+	"name": "271",
+	"description": "The wolfs awaits to kill",
+	"enemies":[
+		{
+			"name": "Black Wolf",
+			"type": "animal",
+			"skill": 8,
+			"stamina": 9,
+			"combatConditions": []
+		}
+	]
+}

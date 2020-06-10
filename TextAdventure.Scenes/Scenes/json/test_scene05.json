@@ -1,0 +1,22 @@
+{
+	"conditions": [
+		{
+			"attribute": "item",
+			"checkCondition": "add",
+			"sourceDescription": "",
+			"type": "inventory",
+			"value": "Silver Dagger"
+		},
+		{
+			"type": "codeword",
+			"value": "Deliugeb"
+		}
+	],
+	"enemies": null,
+	"exits": null,
+	"id": "10",
+	"name": "10",
+	"nextScene": "350",
+	"description": "A description",
+	"spawns": null
+}

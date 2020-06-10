@@ -66,6 +66,16 @@ namespace TextAdventure.Controllers
 				MovePlayer(Navigator.CurrentScene.NextScene, null, string.Empty);
 		}
 
+		public bool HasEnemies()
+		{
+			return CurrentScene.Enemies.Any();
+		}
+
+		public void AddCodeword(string codeword)
+		{
+			Player.CodeWords.Add(codeword);
+		}
+
 		public void MovePlayer(string destinationScene,
 								string currentScene,
 								string moveDescription)
@@ -210,6 +220,7 @@ namespace TextAdventure.Controllers
 		public void DisplayPlayerStats()
 		{
 			displayController.DisplayPlayerStats(Player);
+
 		}
 
 		public void RespondCommandChoice(string choice)

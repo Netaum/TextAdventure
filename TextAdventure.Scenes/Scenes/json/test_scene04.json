@@ -1,0 +1,26 @@
+{
+	"id": "271",
+	"name": "271",
+	"description": "The dead awaits to kill",
+	"enemies":[
+		{
+			"name": "Undead Man",
+			"type": "undead",
+			"skill": 8,
+			"stamina": 9,
+			"combatConditions": [
+				{
+					"type": "win",
+					"nextScene": "271"
+				},
+				{
+					"type": "attributeCheck",
+					"attribute": "combatTurn",
+					"checkCondition": "equal",
+					"value": "2",
+					"nextScene": "271"
+				}
+			]
+		}
+	]
+}
