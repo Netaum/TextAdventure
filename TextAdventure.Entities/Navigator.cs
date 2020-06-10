@@ -9,19 +9,19 @@ namespace TextAdventure.Entities
 	public class Navigator : INavigator
 	{
 		public IScene CurrentScene { get; private set; }
-		public IEnumerable<IScene> SceneExits
+		public IEnumerable<string> SceneExits
 		{
 			get
 			{
 				return sceneExits.Select(s => s.Value);
 			}
 		}
-		private IDictionary<string, IScene> sceneExits;
+		private IDictionary<string, string> sceneExits;
 		private IGameController controller;
 		public Navigator(IGameController controller)
 		{
 			this.controller = controller;
-			sceneExits = new Dictionary<string, IScene>();
+			sceneExits = new Dictionary<string, string>();
 		}
 
 		public void SetNextScene(IScene scene)
@@ -41,18 +41,18 @@ namespace TextAdventure.Entities
 
 			foreach (var exit in CurrentScene.Exits)
 			{
-				sceneExits.Add(exit.Key, exit.Scene);
+				sceneExits.Add(exit.Key, exit.SceneId);
 			}
 		}
 
-		public IScene AttemptMoveFromAction(string action)
+		public string AttemptMoveFromAction(string action)
 		{
 			return sceneExits.ContainsKey(action) ?
 				   sceneExits[action] :
 				   null;
 		}
 
-		public IScene GetExitFromCommand(string command)
+		public string GetExitFromCommand(string command)
 		{
 			if(!sceneExits.ContainsKey(command))
 				return null;

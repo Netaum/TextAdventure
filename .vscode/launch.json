@@ -12,7 +12,7 @@
 			"program": "${workspaceFolder}/TextAdventure.ConsoleApp/bin/Debug/netcoreapp3.1/TextAdventure.ConsoleApp.dll",
 			"args": [],
 			"cwd": "${workspaceFolder}/TextAdventure.ConsoleApp",
-			"console": "internalConsole",
+			"console": "integratedTerminal",
 			"stopAtEntry": false
 		},
 		{

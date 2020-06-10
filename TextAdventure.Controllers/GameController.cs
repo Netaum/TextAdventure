@@ -245,12 +245,13 @@ namespace TextAdventure.Controllers
 		public void RespondCommandChoice(string choice)
 		{
 			var exitScene = Navigator.GetExitFromCommand(choice);
-			if (exitScene is null)
+			if (string.IsNullOrEmpty(exitScene))
 			{
 				displayController.DisplayText($"The selected choice ({choice}) is invalid");
 				return;
 			}
-			MovePlayer(exitScene, $"You choice {choice}.");
+			var scene = GetScene(exitScene);
+			MovePlayer(scene, $"You choice {choice}.");
 		}
 
 		public void SpawnEnemy(string name,
