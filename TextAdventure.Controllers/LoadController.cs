@@ -36,6 +36,7 @@ namespace TextAdventure.Controllers
 				jsonSettings.Converters.Add(new InteractionConverter());
 				jsonSettings.Converters.Add(new EnemyConverter());
 				jsonSettings.Converters.Add(new ConditionConverter());
+				jsonSettings.Converters.Add(new EnemySpawnerConverter());
 
 				return jsonSettings;
 			}

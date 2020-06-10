@@ -33,6 +33,9 @@ namespace TextAdventure.Entities
 
 		public void UnpackScene()
 		{
+			if(CurrentScene.EnemySpawner != null)
+				CurrentScene.EnemySpawner.SpawnEnemies(controller);
+
 			if (CurrentScene.Exits == null)
 				return;
 

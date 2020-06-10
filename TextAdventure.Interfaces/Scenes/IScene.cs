@@ -12,6 +12,7 @@ namespace TextAdventure.Interfaces.Scenes
 		IList<Entities.IInteractableObject> Objects { get; }
 		IList<Conditions.ICondition> Conditions { get; }
 		IList<Entities.IEnemy> Enemies { get; }
+		IEnemySpawner EnemySpawner { get; }
 		string GetExitsDescription();
 		string GetObjectsDescription();
 	}

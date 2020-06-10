@@ -1,0 +1,14 @@
+{
+	"id": "1",
+	"name": "First Scene",
+	"description": "There is a huge moon in the sky.\nThe howl hunts me to the end.\nThere is no escape.",
+	"enemySpawner": {
+		"name": "GIANT SPIDER HATCHLING",
+		"type": "animal",
+		"nextScene": "14.1",
+		"numberOfDice": 1,
+		"enemyCountModifier": 1,
+		"skill": 6,
+		"stamina": 2
+	}
+}

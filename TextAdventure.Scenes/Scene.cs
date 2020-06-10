@@ -17,20 +17,21 @@ namespace TextAdventure.Scenes
 		public IList<IInteractableObject> Objects { get; protected set; }
 		public IList<IEnemy> Enemies { get; protected set; }
 		public IList<ICondition> Conditions { get; protected set; }
+		public IEnemySpawner EnemySpawner { get; protected set; }
 
 		[JsonConstructor]
 		protected Scene(string id,
 						string name,
 						string description,
-						string nextScene)
+						string nextScene,
+						IEnemySpawner enemySpawner)
 			: this()
 		{
-			
-
 			Description = description;
 			Name = name;
 			Id = id;
 			NextScene = nextScene;
+			EnemySpawner = enemySpawner;
 		}
 
 		protected Scene()

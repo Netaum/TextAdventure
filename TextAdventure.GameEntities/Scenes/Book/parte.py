@@ -64,19 +64,18 @@ class Enemy:
 class Spawn:
 	def __init__(self,
 				 name,
-				 numberDice,
-				 plus,
-				 skill,
-				 stamina,
+				 type,
 				 nextScene,
-				 description):
+				 numberOfDice,
+				 enemyCountModifier,
+				 skill,
+				 stamina):
 		self.name = name
-		self.numberOfDice = numberDice
-		self.plus = plus
+		self.numberOfDice = numberOfDice
+		self.enemyCountModifier = enemyCountModifier
 		self.skill = skill
 		self.stamina = stamina
 		self.nextScene = nextScene
-		self.description = description
 
 class Exit:
 	def __init__(self,
@@ -109,7 +108,7 @@ class Scene:
 		self.conditions = None
 		self.exits = None
 		self.spawns = None
-		self.enemies = None
+		self.enemySpawner = None
 
 	def add_exit(self, exit):
 		if not self.exits:
@@ -124,10 +123,8 @@ class Scene:
 	def add_next_scene(self, nextScene):
 		self.nextScene = nextScene
 	
-	def add_spawn(self, spawn):
-		if not self.spawns:
-			self.spawns = []
-		self.spawns.append(spawn)
+	def set_spawn(self, spawn):
+		self.enemySpawner = spawn
 
 	def add_enemy(self, enemy):
 		if not self.enemies:
@@ -169,6 +166,7 @@ for (number, text, exits) in re.findall(chapterPattern, txt):
 			q = Exit(qDesc,qKey,qScene)
 			s.add_exit(q)
 
+		# REFAZER
 		if line.startswith("-s"):
 			(sName,sDice,sPlus,sSkill,sStamina,sScene,sDesc) = re.findall(spawnPattern, line)[0]
 			spw = Spawn(sName, sDice, sPlus, sSkill, sStamina, sScene, sDesc)

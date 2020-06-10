@@ -7,6 +7,7 @@ using TextAdventure.Interfaces.Enums;
 using TextAdventure.Interfaces.Scenes;
 using TextAdventure.Interfaces.Entities;
 using TextAdventure.Interfaces.Commands;
+using TextAdventure.Conditions;
 
 namespace TextAdventure.Controllers
 {
@@ -55,10 +56,10 @@ namespace TextAdventure.Controllers
 			{
 				foreach (var condition in Navigator.CurrentScene.Conditions)
 				{
-					//if(condition.IsConditionFulfilled(this, null))
-					//{
-					//	condition.ApplyCondition(this);
-					//}
+					if(condition.IsConditionFulfilled(this, null))
+					{
+						condition.ApplyCondition(this);
+					}
 				}
 			}
 
@@ -182,6 +183,14 @@ namespace TextAdventure.Controllers
 				displayController.DisplayText(description);
 			}
 
+			foreach(var condition in enemy.CombatConditions)
+			{
+				if(condition.IsConditionFulfilled(this, enemy))
+				{
+					condition.ApplyCondition(this);
+				}
+			}
+
 			if (enemy.IsDead())
 			{
 				Navigator.CurrentScene.Enemies.Remove(enemy);
@@ -220,9 +229,8 @@ namespace TextAdventure.Controllers
 		public void DisplayPlayerStats()
 		{
 			displayController.DisplayPlayerStats(Player);
-
 		}
-
+		
 		public void RespondCommandChoice(string choice)
 		{
 			var exitScene = Navigator.GetExitFromCommand(choice);
@@ -232,6 +240,18 @@ namespace TextAdventure.Controllers
 				return;
 			}
 			MovePlayer(exitScene, $"You choice {choice}.");
+		}
+
+		public void SpawnEnemy(string name, 
+							   int skill,
+							   int stamina,
+							   EnemyType type,
+							   string nextScene)
+		{
+			var enemy = new Enemy(name, skill, stamina, type);
+			var winCondition = new WinCondition(nextScene);
+			enemy.CombatConditions.Add(winCondition);
+			CurrentScene.Enemies.Add(enemy);
 		}
 		private IScene GetScene(string sceneName)
 		{
