@@ -144,7 +144,7 @@ namespace TextAdventure.Controllers
 
 		public void ChangePlayerStat(Stats stat, CheckCondition condition, int value)
 		{
-			if (changeStatsConditions.Contains(condition))
+			if (!changeStatsConditions.Contains(condition))
 			{
 				throw new System.Exception($"Invalid condition ({condition}) to change stats.");
 			}
@@ -194,18 +194,18 @@ namespace TextAdventure.Controllers
 				displayController.DisplayText(description);
 			}
 
+			if (enemy.IsDead())
+			{
+				Navigator.CurrentScene.Enemies.Remove(enemy);
+				displayController.DisplayText($"You killed the enemy {enemy.Name}");
+			}
+
 			foreach (var condition in enemy.CombatConditions)
 			{
 				if (condition.IsConditionFulfilled(this, enemy))
 				{
 					condition.ApplyCondition(this);
 				}
-			}
-
-			if (enemy.IsDead())
-			{
-				Navigator.CurrentScene.Enemies.Remove(enemy);
-				displayController.DisplayText($"You killed the enemy {enemy.Name}");
 			}
 		}
 

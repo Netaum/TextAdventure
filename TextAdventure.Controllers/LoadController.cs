@@ -4,12 +4,34 @@ using Newtonsoft.Json.Serialization;
 using TextAdventure.Controllers.Converters;
 using TextAdventure.Interfaces.Controllers;
 using TextAdventure.Interfaces.Entities;
+using TextAdventure.Interfaces.Enums;
 using TextAdventure.Interfaces.Scenes;
 
 namespace TextAdventure.Controllers
 {
 	public class LoadController : ILoadController
 	{
+		private readonly LoadSceneOrigin origin;
+		private readonly string fileFolder;
+
+		public LoadController(LoadSceneOrigin origin = LoadSceneOrigin.Game,
+							  string cenario = null)
+		{
+			this.origin = origin;
+
+			switch (origin)
+			{
+				case LoadSceneOrigin.Game:
+					fileFolder = "game";
+					break;
+				case LoadSceneOrigin.Tests:
+					fileFolder = "tests";
+					break;
+				case LoadSceneOrigin.Cenarios:
+					fileFolder = $"cenarios/{cenario}";
+					break;
+			}
+		}
 		private static JsonSerializerSettings jsonSettings;
 		private static object syncLock = new object();
 		private static JsonSerializerSettings Instance
@@ -43,7 +65,7 @@ namespace TextAdventure.Controllers
 		}
 		public IScene LoadScene(string sceneName)
 		{
-			var fileName = $"/Scenes/json/{sceneName}.json";
+			var fileName = $"/Scenes/json/{fileFolder}/{sceneName}.json";
 			var file = TextAdventure.Common.Tools.Tools.ReadFile(fileName);
 			return JsonConvert.DeserializeObject<IScene>(file, Instance);
 		}

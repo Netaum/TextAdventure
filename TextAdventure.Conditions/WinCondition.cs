@@ -21,7 +21,7 @@ namespace TextAdventure.Conditions
 			if(enemy is null)
                 return false;
 
-            return enemy.IsDead() && controller.HasEnemies();
+            return enemy.IsDead() && !controller.HasEnemies();
 		}
 	}
 }

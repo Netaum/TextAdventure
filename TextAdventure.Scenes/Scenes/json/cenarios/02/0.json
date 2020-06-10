@@ -1,0 +1,17 @@
+{
+    "conditions": [
+        {
+            "attribute": "change",
+            "checkCondition": "add",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "Inexplicably, something starts to claw at you inside your chest \u2014 at least that's what it feels like.\nYou cry out in pain as you double up, but the cry that comes from your throat is more like a lupine howl; and that's not all! \nYou can feel fur bristling your face and it appearing on the backs of your hands, while the tip your ears stretch and reshape themselves.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "3",
+    "nextScene": "1"
+}

@@ -1,0 +1,16 @@
+{
+    "conditions": null,
+    "description": "Emerging from the tunnel, you enter a vast chamber - a natural stone cathedral deep within the rock of Sundered Peak.\nHanging amid the stalactites suspended from the roof of the cavern are pendulous, silk-wrapped egg-sacs, like those made by spiders, although each of these is as big as a treasure chest.\nAs you cross the chamber, you detect movement above you.\nLooking up into the gloom you see several of the scas split open and the giant spider hatchlings emerge.\nEach has a distinctive set of markings on its abdomen, in the form of a grinning Death's Head, and each hatches with the instinctive desire to hunt!",
+    "enemies": null,
+    "enemySpawner": {
+        "enemyCountModifier": 1,
+        "name": "GIANT SPIDER HATCHLING",
+        "nextScene": "1",
+        "numberOfDice": 1,
+        "skill": 6,
+        "stamina": 2
+    },
+    "exits": null,
+    "id": "14",
+    "nextScene": null
+}

@@ -63,10 +63,6 @@ namespace TextAdventure.Controllers
 		{
 			var builder = new StringBuilder();
 			builder.AppendLine("You look in your backpack, inside you have: ");
-
-			if(!player.Inventory.Any())
-				builder.AppendLine("... nothing.");
-
 			foreach (var item in player.Inventory)
 			{
 				builder.AppendLine("- " + item.Name);
