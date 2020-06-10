@@ -42,7 +42,7 @@ namespace TextAdventure.Common.Tests.Tools
 		[InlineData("use", ActionEnum.Use)]
 		public void ParseActionShouldWork(string action, ActionEnum actionEnumExpected)
 		{
-			var result = ParseTool.Tools.ParseAction(action);
+			var result = ParseTool.Tools.ParseCommand(action);
 			Assert.Equal(result, actionEnumExpected);
 		}
 
@@ -51,7 +51,7 @@ namespace TextAdventure.Common.Tests.Tools
 		[InlineData("blabla")]
 		public void ParseActionShouldNotWork(string action)
 		{
-			var result = ParseTool.Tools.ParseAction(action);
+			var result = ParseTool.Tools.ParseCommand(action);
 			Assert.Null(result);
 		}
 

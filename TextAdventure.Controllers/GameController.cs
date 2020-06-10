@@ -8,6 +8,8 @@ using TextAdventure.Interfaces.Scenes;
 using TextAdventure.Interfaces.Entities;
 using TextAdventure.Interfaces.Commands;
 using TextAdventure.Conditions;
+using TextAdventure.Commands;
+using TextAdventure.Common.Tools;
 
 namespace TextAdventure.Controllers
 {
@@ -39,13 +41,12 @@ namespace TextAdventure.Controllers
 		{
 			this.displayController = displayController;
 			this.loadController = loadController;
-
-			commands = new List<IInputCommand>();
-
+			commands = InputCommand.GetAllCommands();
 			scenes = new Dictionary<string, IScene>();
 			gameItens = new List<IInteractableObject>();
 			Navigator = new Navigator(this);
 			Player = new Player(this);
+			MovePlayer("0", null, null);
 		}
 
 		public void StartScene()
@@ -56,7 +57,7 @@ namespace TextAdventure.Controllers
 			{
 				foreach (var condition in Navigator.CurrentScene.Conditions)
 				{
-					if(condition.IsConditionFulfilled(this, null))
+					if (condition.IsConditionFulfilled(this, null))
 					{
 						condition.ApplyCondition(this);
 					}
@@ -65,6 +66,16 @@ namespace TextAdventure.Controllers
 
 			if (!string.IsNullOrEmpty(Navigator.CurrentScene.NextScene))
 				MovePlayer(Navigator.CurrentScene.NextScene, null, string.Empty);
+		}
+
+		public IInputCommand GetInputCommand(string command)
+		{
+			var action = Tools.ParseCommand(command);
+			if(action.HasValue)
+			{
+				return commands.SingleOrDefault(f => f.Command == action.Value);
+			}
+			return null;
 		}
 
 		public bool HasEnemies()
@@ -78,8 +89,8 @@ namespace TextAdventure.Controllers
 		}
 
 		public void MovePlayer(string destinationScene,
-								string currentScene,
-								string moveDescription)
+							   string currentScene,
+							   string moveDescription)
 		{
 			if (!string.IsNullOrEmpty(currentScene) &&
 				Navigator.CurrentScene.Id != currentScene)
@@ -94,8 +105,8 @@ namespace TextAdventure.Controllers
 			Navigator.SetNextScene(scene);
 			Player.EnterScene(scene);
 			StartScene();
-			var description = moveDescription ?? $"You moved to {scene.Name}";
-			displayController.DisplayText(description);
+			//var description = moveDescription ?? $"You moved to {scene.Name}";
+			//displayController.DisplayText(description);
 		}
 
 		public void AddItemToPlayer(string itemName)
@@ -183,9 +194,9 @@ namespace TextAdventure.Controllers
 				displayController.DisplayText(description);
 			}
 
-			foreach(var condition in enemy.CombatConditions)
+			foreach (var condition in enemy.CombatConditions)
 			{
-				if(condition.IsConditionFulfilled(this, enemy))
+				if (condition.IsConditionFulfilled(this, enemy))
 				{
 					condition.ApplyCondition(this);
 				}
@@ -230,7 +241,7 @@ namespace TextAdventure.Controllers
 		{
 			displayController.DisplayPlayerStats(Player);
 		}
-		
+
 		public void RespondCommandChoice(string choice)
 		{
 			var exitScene = Navigator.GetExitFromCommand(choice);
@@ -242,7 +253,7 @@ namespace TextAdventure.Controllers
 			MovePlayer(exitScene, $"You choice {choice}.");
 		}
 
-		public void SpawnEnemy(string name, 
+		public void SpawnEnemy(string name,
 							   int skill,
 							   int stamina,
 							   EnemyType type,

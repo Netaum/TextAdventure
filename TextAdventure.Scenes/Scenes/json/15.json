@@ -1,0 +1,24 @@
+{
+    "conditions": [
+        {
+            "attribute": "stamina",
+            "checkCondition": "add",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "4"
+        },
+        {
+            "attribute": "luck",
+            "checkCondition": "add",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "You spend the next two days in the pleasant company of the Camivale folk as they break camp and set off along rhe road east out of Balci.\nYou feel rested and refreshed, and more positive about your whole situation.\nThe unsettling transformation you under went also reversed itself come dawn the next day.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "15",
+    "nextScene": "15.1"
+}

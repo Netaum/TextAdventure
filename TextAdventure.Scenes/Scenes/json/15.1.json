@@ -1,0 +1,9 @@
+{
+    "conditions": null,
+    "description": "Another day on road brings you to he town Of Vargenhof.\nAs circus folk start setting up for another series of shows, you thank the Carnivale Master for his generosity of spirit but tell him that you must be on your way, so wander off into the town.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "15.1",
+    "nextScene": "500"
+}

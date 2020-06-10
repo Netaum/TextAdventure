@@ -71,10 +71,10 @@ class Spawn:
 				 skill,
 				 stamina):
 		self.name = name
-		self.numberOfDice = numberOfDice
-		self.enemyCountModifier = enemyCountModifier
-		self.skill = skill
-		self.stamina = stamina
+		self.numberOfDice = int(numberOfDice)
+		self.enemyCountModifier = int(enemyCountModifier)
+		self.skill = int(skill)
+		self.stamina = int(stamina)
 		self.nextScene = nextScene
 
 class Exit:
@@ -101,13 +101,14 @@ class Condition:
 
 class Scene:
 	def __init__(self,
-				 id):
+				 id,
+				 description):
 		self.id = id
-		self.fileDescription = True
+		self.description = description
 		self.nextScene = None
 		self.conditions = None
 		self.exits = None
-		self.spawns = None
+		self.enemies = None
 		self.enemySpawner = None
 
 	def add_exit(self, exit):
@@ -146,10 +147,11 @@ with open("formated.txt", "r") as file:
 	txt = file.read()
 	
 for (number, text, exits) in re.findall(chapterPattern, txt):
-	fileName = f"{number}.txt"
+	#fileName = f"{number}.txt"
 	#with open(fileName, "w+") as f:
 	#	f.write(text.strip())
-	s = Scene(number)
+	description = text.strip()
+	s = Scene(number, description)
 	for line in exits.splitlines():
 
 		if line.startswith("-c"):
@@ -166,11 +168,10 @@ for (number, text, exits) in re.findall(chapterPattern, txt):
 			q = Exit(qDesc,qKey,qScene)
 			s.add_exit(q)
 
-		# REFAZER
 		if line.startswith("-s"):
-			(sName,sDice,sPlus,sSkill,sStamina,sScene,sDesc) = re.findall(spawnPattern, line)[0]
-			spw = Spawn(sName, sDice, sPlus, sSkill, sStamina, sScene, sDesc)
-			s.add_spawn(spw)
+			(sName,sType,sDice,sPlus,sSkill,sStamina,sScene) = re.findall(spawnPattern, line)[0]
+			spw = Spawn(sName, sType, sScene, sDice, sPlus, sSkill, sStamina)
+			s.set_spawn(spw)
 		
 		if line.startswith("-e:"):
 			(name, skill, stamina) = re.findall(enemyPattern, line)[0]
@@ -183,7 +184,11 @@ for (number, text, exits) in re.findall(chapterPattern, txt):
 			e.add_move_condition(mc)
 
 	scenes[number] = s
+	fileName = f"{number}.json"
+	with open(fileName, "w+") as f:
+		json_text = json.dumps(s, default=lambda o: o.__dict__, sort_keys=True, indent=4)
+		f.write(json_text)
 
 print('oi')
-print(json.dumps(scenes, default=lambda o: o.__dict__, sort_keys=True, indent=4))
+#print()
 

@@ -1,0 +1,24 @@
+{
+    "conditions": [
+        {
+            "attribute": "item",
+            "checkCondition": "add",
+            "sourceDescription": "",
+            "type": "inventory",
+            "value": "Silver Dagger"
+        },
+        {
+            "attribute": "code",
+            "checkCondition": "add",
+            "sourceDescription": "",
+            "type": "codeword",
+            "value": "Deliugeb"
+        }
+    ],
+    "description": "Staring into the Countess' eyes and enraptured by the mesmerising tone of her voice, you forget why you came to Maun Tower in the first place.\nSuddenly all that matters is what the Lady is telling you: \n\"You will be my agent of destruction.\"\n\"I know what you desire, and I desire it too.\"\"\n\"Hunt down the wolf and slay it.\"\"\nHer manservant is suddenly at her side, a small, teak chest, open in his hands.\nInside, lying on a bed of black velvet is an ornate Silver Dagger.\n'Take this,' the Countess says, as her Servant offers you the blade, 'and if you succeed in your quest, I shall reward you beyond your wildest dreams.'\nActing as if all free will has left you, you take the Silver Dagger.\n'Now go', the Countess commands, and you leave her tower.\nPassing through Maun you head north into the hills.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "10",
+    "nextScene": "350"
+}

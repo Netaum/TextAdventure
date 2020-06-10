@@ -1,0 +1,9 @@
+{
+    "conditions": null,
+    "description": "Brandishing the holy symbol in front of the Vampiress causes her to recoil, throwing her hands up in front of her face, spitting like a wildcat.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "17",
+    "nextScene": "245"
+}

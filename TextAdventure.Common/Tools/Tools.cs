@@ -6,7 +6,7 @@ namespace TextAdventure.Common.Tools
 {
 	public static class Tools
 	{
-		public static ActionEnum? ParseAction(string actionString)
+		public static ActionEnum? ParseCommand(string actionString)
 		{
 			if (Enum.TryParse(typeof(ActionEnum), actionString, true, out object actionValue))
 			{

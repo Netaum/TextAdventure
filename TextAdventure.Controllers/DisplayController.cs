@@ -13,7 +13,7 @@ namespace TextAdventure.Controllers
 	public class DisplayController : IDisplayController
 	{
 		public void DisplayText(string text,
-								int waitMilliseconds = 500)
+								int waitMilliseconds = 1)
 		{
 			var lines = text.Split("\n");
 			foreach (var l in lines)

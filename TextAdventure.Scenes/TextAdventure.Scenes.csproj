@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Scenes\json\*.json">
+    <Content Include="Scenes\json\**\*.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>  
   </ItemGroup>

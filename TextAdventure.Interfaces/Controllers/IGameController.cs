@@ -1,3 +1,4 @@
+using TextAdventure.Interfaces.Commands;
 using TextAdventure.Interfaces.Enums;
 
 namespace TextAdventure.Interfaces.Controllers
@@ -24,5 +25,7 @@ namespace TextAdventure.Interfaces.Controllers
 		void RespondCommandChoice(string choice);
 
 		Scenes.IScene CurrentScene { get; }
+
+		IInputCommand GetInputCommand(string command);
 	}
 }

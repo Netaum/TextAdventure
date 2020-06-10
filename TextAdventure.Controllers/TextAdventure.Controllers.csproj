@@ -9,6 +9,7 @@
     <ProjectReference Include="..\TextAdventure.Entities\TextAdventure.Entities.csproj" />
     <ProjectReference Include="..\TextAdventure.Conditions\TextAdventure.Conditions.csproj" />
     <ProjectReference Include="..\TextAdventure.Common\TextAdventure.Common.csproj" />
+    <ProjectReference Include="..\TextAdventure.Commands\TextAdventure.Commands.csproj" />
     <ProjectReference Include="..\TextAdventure.Scenes\TextAdventure.Scenes.csproj" />
     <ProjectReference Include="..\TextAdventure.Responses\TextAdventure.Responses.csproj" />
   </ItemGroup>

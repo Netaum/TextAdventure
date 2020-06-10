@@ -1,0 +1,17 @@
+{
+    "conditions": [
+        {
+            "attribute": "change",
+            "checkCondition": "add",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "You spend a restless night in your room, kept awake by strange and disturbing noises that fill you with a sense of dread.\nThere is the clattering of hooves on cobbles, shrill whinnying, crazed cackling laughter, and the moaning of an unearthly gale.\nCome the morning, you feel just as tired as you did on retiring to bed and in your weakened state, your inner wolf gains a greater hold on your body",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "13",
+    "nextScene": "13.1"
+}

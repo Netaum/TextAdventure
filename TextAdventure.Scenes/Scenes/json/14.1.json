@@ -1,0 +1,25 @@
+{
+    "conditions": null,
+    "description": "After the battle, witch route will you take out of the vast cavern.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Wide, circular tunnel.",
+            "key": "circular",
+            "sceneId": "122"
+        },
+        {
+            "description": "Tunnel with its walls running with water.",
+            "key": "water",
+            "sceneId": "405"
+        },
+        {
+            "description": "Narrow, twisting passage.",
+            "key": "narrow",
+            "sceneId": "415"
+        }
+    ],
+    "id": "14.1",
+    "nextScene": null
+}

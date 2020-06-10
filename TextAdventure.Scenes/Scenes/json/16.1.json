@@ -1,0 +1,20 @@
+{
+    "conditions": null,
+    "description": "After you defeat the Ccxkroaches, you manage to break the rusted lock of the cell door and, opening it, find yourself in a subterranean passageway.\nTo your right the corridor comes to a dead end.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Follow to the left.",
+            "key": "left",
+            "sceneId": "421"
+        },
+        {
+            "description": "Take another passage perpendicular to this one.",
+            "key": "another",
+            "sceneId": "282"
+        }
+    ],
+    "id": "16.1",
+    "nextScene": null
+}

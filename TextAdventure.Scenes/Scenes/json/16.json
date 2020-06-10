@@ -1,0 +1,22 @@
+{
+    "conditions": null,
+    "description": "You come to lying in a cold stone cell, lit by a single flickering oil-lamp.\nAwareness returns more quicklyas you hear a disconcerting chirruping sound.\nYou are not alone m the cell.\nBetween you and the cell door scuttle two grotesquely overgrown cockroaches.\nSawing their antennae together they move towards you.",
+    "enemies": [
+        {
+            "moveConditions": null,
+            "name": "GIANT COCKROACH",
+            "skill": "7",
+            "stamina": "6"
+        },
+        {
+            "moveConditions": null,
+            "name": "GIANT COCKROACH",
+            "skill": "6",
+            "stamina": "7"
+        }
+    ],
+    "enemySpawner": null,
+    "exits": null,
+    "id": "16",
+    "nextScene": "16.1"
+}

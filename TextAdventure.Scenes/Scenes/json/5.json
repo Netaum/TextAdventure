@@ -1,0 +1,20 @@
+{
+    "conditions": null,
+    "description": "You do not have to walk far to reach the ruins.\nWith the dusk deepening around you, you begin to explore them by twilight.\nYou pass between crumbling stone walls \u2014 whatever roof they might once have supported long gone \u2014 and beneath broken arches into dirt floored chambers open to the sky, home now to scurrying beetles, centipedes and vermin.\nWho built this place \u2014 you find yourself wondering \u2014 and what went on here ? \nWere these ruins once some lord's stronghold, a sorcerers hideaway, or holy temple dedicated to a now-forgotten deity? \nThere is one thing you are certain of, however.\nEvil holds dominion here now.\nLurking shadows seem change and move.\nThe longer you explore thee ruins, the more intense the feeling become that there is evil lingering within this place, and it is making you feel increasingly uncomfortable.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Depart without futher delay.",
+            "key": "depart",
+            "sceneId": "38"
+        },
+        {
+            "description": "Investigate futher.",
+            "key": "investigate",
+            "sceneId": "249"
+        }
+    ],
+    "id": "5",
+    "nextScene": null
+}

@@ -17,7 +17,7 @@ namespace TextAdventure.Controllers.Tests
         [Fact]
         public void LoadSimpleScene_ShouldWork()
         {
-            var testFile = "test_scene01";
+            var testFile = "tests/test_scene01";
             var scene = controller.LoadScene(testFile);
             Assert.NotNull(scene);
             Assert.NotNull(scene.Name);
@@ -28,7 +28,7 @@ namespace TextAdventure.Controllers.Tests
         [Fact]
         public void LoadScene_WithExits_ShouldWork()
         {
-            var testFile = "test_scene02";
+            var testFile = "tests/test_scene02";
             var scene = controller.LoadScene(testFile);
             Assert.NotNull(scene);
             Assert.NotNull(scene.Name);
@@ -40,7 +40,7 @@ namespace TextAdventure.Controllers.Tests
         [Fact]
         public void LoadScene_WithConditions_ShouldWork()
         {
-            var testFile = "test_scene05";
+            var testFile = "tests/test_scene05";
             var scene = controller.LoadScene(testFile);
             Assert.NotNull(scene);
             Assert.NotNull(scene.Name);
@@ -55,7 +55,7 @@ namespace TextAdventure.Controllers.Tests
         [Fact]
         public void LoadScene_WithSimpleEnemy_ShouldWork()
         {
-            var testFile = "test_scene03";
+            var testFile = "tests/test_scene03";
             var scene = controller.LoadScene(testFile);
             Assert.NotNull(scene);
             Assert.NotNull(scene.Name);
@@ -69,7 +69,7 @@ namespace TextAdventure.Controllers.Tests
         [Fact]
         public void LoadScene_WithEnemy_WithCombatConditions_ShouldWork()
         {
-            var testFile = "test_scene04";
+            var testFile = "tests/test_scene04";
             var scene = controller.LoadScene(testFile);
             Assert.NotNull(scene);
             Assert.NotNull(scene.Name);
@@ -84,7 +84,7 @@ namespace TextAdventure.Controllers.Tests
         [Fact]
         public void LoadScene_EnemySpawner_ShouldWork()
         {
-            var testFile = "test_scene06";
+            var testFile = "tests/test_scene06";
             var scene = controller.LoadScene(testFile);
             Assert.NotNull(scene);
             Assert.NotNull(scene.Name);

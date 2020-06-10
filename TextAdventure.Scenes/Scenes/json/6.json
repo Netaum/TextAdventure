@@ -1,0 +1,20 @@
+{
+    "conditions": null,
+    "description": "Lifting the latch, you push open the heavy door of Thee Giblet Tree.\nThe inn sign, which depicts an empty gallows scaffold and swinging noose, creaks rustily in the night-breeze above you.\nShutting door, you enter the bar room beyond.\nIt is relatively large, with a number of tables and chairs dotted around, but other than you, there appears to be only one other customer; a young man with an intensely serious expression on his face.\nThe last embers Of a fire smoulder in the grate, which is set into a large chimney breast.\nStanding behind the bar is a blubbery, bald-headed man whom you take to be the landlord, lugubriously rubbing a tankard with the skirts of his filthy apron, and a girl of no more than eighteen or nineteen, whose black hair is an unkempt mess, her vacant eyes staring into the dying coals of the fire.\nNo one speaks, making then whining of the wind in the leaves even more unsettling.\nA night at an inn such as this shouldn't cost more than couple of Gold Pieces, but you can imagine you would receive a warmer welcome from a pack of snow wolves in the Cloudcap Mounains in mid-winter.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Spend what remains of the night at Giblet Tree.",
+            "key": "stay",
+            "sceneId": "131"
+        },
+        {
+            "description": "Risk a night out the under the stars.",
+            "key": "risk",
+            "sceneId": "466"
+        }
+    ],
+    "id": "6",
+    "nextScene": null
+}

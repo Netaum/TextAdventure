@@ -1,0 +1,20 @@
+{
+    "conditions": null,
+    "description": "The gathered circus folk gasp and take a step back, apart from the Master.\n'Ah' he muses, 'a wolfman'.\nWe haven't got one of those.\nYou stare at him in amazument; this is not the reaction you would have expected.\n'We all have our secrets, do we not?' the Master says, givig you a wicked grin.\n'But I think we might have a place for you, within our Carnivale \u2014 that is, if you would like to join us.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Accept the Master's Offer.",
+            "key": "accept",
+            "sceneId": "15"
+        },
+        {
+            "description": "Decline.",
+            "key": "decline",
+            "sceneId": "509"
+        }
+    ],
+    "id": "3.1",
+    "nextScene": null
+}

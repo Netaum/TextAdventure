@@ -1,0 +1,25 @@
+{
+    "conditions": null,
+    "description": "Following the tunne throught the peak you come to a smaller cave from which a total of three routes leads onwards\nHow will you progress now?",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "To the tunnel from where emanates a musky animal smell.",
+            "key": "tunnel",
+            "sceneId": "435"
+        },
+        {
+            "description": "To the cobweb passageway.",
+            "key": "cobweb",
+            "sceneId": "415"
+        },
+        {
+            "description": "To the white quartz tunnel.",
+            "key": "quartz",
+            "sceneId": "70"
+        }
+    ],
+    "id": "9",
+    "nextScene": null
+}

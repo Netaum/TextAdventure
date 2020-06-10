@@ -1,0 +1,25 @@
+{
+    "conditions": null,
+    "description": "The people of Wulfenstein have locked and barred their doors and windows, hiding from whatever it isthat is making the dreadful, growling you can hear echoing along the village streets.\nYour hackles rise, your wolfish senses recoiling in the presence of something bestial and malign.\nAs you creep throug the eerily empty sheets, you hear panting and the scrape of claws on cobblestones.\nShadows loom around a street comer...\nSomething is comming\nIt is at that moment that a gaunt old man sticks his wild haired head out from an alleyway and beckons to you with a long-nailed finger.\n\"Stranger, if you want to live, come with me\".",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Follow the mangy beggar.",
+            "key": "follow",
+            "sceneId": "59"
+        },
+        {
+            "description": "Prepare to face whatever is comming.",
+            "key": "prepare",
+            "sceneId": "172"
+        },
+        {
+            "description": "Hide without the beggar's help.",
+            "key": "hide",
+            "sceneId": "204"
+        }
+    ],
+    "id": "19",
+    "nextScene": null
+}

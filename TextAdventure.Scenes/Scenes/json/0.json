@@ -1,0 +1,9 @@
+{
+    "conditions": null,
+    "description": "BAD MOON RISING",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "0",
+    "nextScene": "1"
+}

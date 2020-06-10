@@ -1,0 +1,38 @@
+{
+    "conditions": [
+        {
+            "attribute": "skill",
+            "checkCondition": "addp",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        },
+        {
+            "attribute": "stamina",
+            "checkCondition": "addp",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "2"
+        },
+        {
+            "attribute": "change",
+            "checkCondition": "add",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        },
+        {
+            "attribute": "",
+            "checkCondition": "",
+            "sourceDescription": "51-248-469-106-305-354",
+            "type": "diceRoll",
+            "value": "1"
+        }
+    ],
+    "description": "The lycanthropy is steadily spreading throughout your body and changes are being wrought at the core of your being.\nIn fact, perversely the curse of the werewolf is making you physically stronger and more adept.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "20",
+    "nextScene": null
+}

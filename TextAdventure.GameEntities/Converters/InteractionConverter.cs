@@ -27,7 +27,7 @@ namespace TextAdventure.GameEntities.Converters
 			else
 			{
 				JObject obj = JObject.Load(reader);
-				var action = Tools.ParseAction(obj["action"].ToString());
+				var action = Tools.ParseCommand(obj["action"].ToString());
 
 				var responseInteraction = new Interaction();
 				if(action.HasValue)

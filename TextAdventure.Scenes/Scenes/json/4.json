@@ -1,0 +1,25 @@
+{
+    "conditions": null,
+    "description": "Hans, the young man you met at The Gibbet Tree, said sister Leisel had run away to join the Carnivale.\nIt surely can't be a coincidence, this must be the travelling circus he was talking about.\nYou remember Hans' words clearly: 'weird, grotesquee and macabre' was how he described it.\nYou have to admitd tha you are intrigued.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Pay the fee and enter the Carnivale now.",
+            "key": "pay",
+            "sceneId": "134"
+        },
+        {
+            "description": "Wait until dark and enter under the cover of the night.",
+            "key": "wait",
+            "sceneId": "238"
+        },
+        {
+            "description": "Do nothing and leave this place.",
+            "key": "leave",
+            "sceneId": "26"
+        }
+    ],
+    "id": "4",
+    "nextScene": null
+}

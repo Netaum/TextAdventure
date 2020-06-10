@@ -1,0 +1,17 @@
+{
+    "conditions": [
+        {
+            "attribute": "",
+            "checkCondition": "",
+            "sourceDescription": "the belladonna poison.",
+            "type": "damage",
+            "value": "2"
+        }
+    ],
+    "description": "After half an hour of searching and with beads of feverish sweat prickling your brow despite the cold, Ulrich suddenly cries out, 'Over here! I've found it!'\nYou hurry to the spot where the woodsman is standing beside the bole of an aging oak.\nGrowing there is the plant known as belladonna, or deadly nightshade, the herb you have been so desperately looking.\nQuickly you pick a handful of sprigs and pop them into your mouth.\nBut belladonna is poisonous and eating somemakes you sick.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "12",
+    "nextScene": "12.1"
+}

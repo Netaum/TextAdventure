@@ -1,0 +1,20 @@
+{
+    "conditions": null,
+    "description": "Yet, despite this, some sixth sense tells you that it hasn't been enough to rid you of your affliction altogether.\nUnless you find another, more effective cure, you are still going to turn into a wolf the next time the moon is full.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Go after the wolf pack.",
+            "key": "go",
+            "sceneId": "473"
+        },
+        {
+            "description": "Search Grandmother Zekova.",
+            "key": "search",
+            "sceneId": "302"
+        }
+    ],
+    "id": "12.2",
+    "nextScene": null
+}

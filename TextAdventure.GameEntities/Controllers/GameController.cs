@@ -44,7 +44,7 @@ namespace TextAdventure.GameEntities.Controllers
 
 		public IInputAction GetAction(string command)
 		{
-			var action = Tools.ParseAction(command);
+			var action = Tools.ParseCommand(command);
 			if(action.HasValue)
 			{
 				return Actions.SingleOrDefault(f => f.Command == action.Value);

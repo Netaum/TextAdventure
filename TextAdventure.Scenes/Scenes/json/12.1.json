@@ -1,0 +1,17 @@
+{
+    "conditions": [
+        {
+            "attribute": "change",
+            "checkCondition": "subtract",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "By doing so, however, you have also slowed the advance ef the lycanthropy throughout your system.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "12.1",
+    "nextScene": "12.2"
+}

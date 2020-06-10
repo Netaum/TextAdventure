@@ -1,0 +1,17 @@
+{
+    "conditions": [
+        {
+            "attribute": "change",
+            "checkCondition": "lessOrEqual",
+            "sourceDescription": "",
+            "type": "roll",
+            "value": "64-161"
+        }
+    ],
+    "description": "Leaving Strigoiva, you make your way towards the dark spur of trees that delineates the outermost extend of the forest. \nGnarled and twisted trees arch over the path between them, forming a foliaged tunnel that leads into the depths of the woods. \nBetween the crowded and clutching branches, the forest is as dark as at dusk.\nOccasionally you hear the twitter of birdsong or the distant shriek of a forest animal, but you see nothing.\nThe forest has an uncanny quality to it that unnwecwa you.\nIt has all the atmosphere of rhw Woodlands of fairy tales and folk-lore.\nThe dimming of the half-light that penetrates this far beneath the trees tells you that rught is on its way.\nA clearing opens before you and you find yourself looking at the mirror-black surface of a woodland pool.\nTraces of water-weed trail the surface amid patches of thick, slime-green algae.\nThe pool is a good hundred meters across but in the twilight you can see that the straggly path you following wends its way around the edge of the lake to the far side.\nAs you prepare to set off again, the sound of singing drifts to your ears over the water.\nIt is a lilting, wordless tune that speaks to you of melancholic loneliness and a deep, dark sorrow.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "8",
+    "nextScene": null
+}

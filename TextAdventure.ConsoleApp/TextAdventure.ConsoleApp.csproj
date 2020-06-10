@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TextAdventure.Common\TextAdventure.Common.csproj" />
+    <ProjectReference Include="..\TextAdventure.Controllers\TextAdventure.Controllers.csproj" />
     <ProjectReference Include="..\TextAdventure.GameEntities\TextAdventure.GameEntities.csproj" />
     <ProjectReference Include="..\TextAdventure.Interfaces\TextAdventure.Interfaces.csproj" />
   </ItemGroup>

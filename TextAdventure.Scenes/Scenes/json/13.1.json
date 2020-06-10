@@ -1,0 +1,9 @@
+{
+    "conditions": null,
+    "description": "You leave The Gibbet Tree without seeing another soul and set off again along the road north across the moors.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "13.1",
+    "nextScene": "69"
+}

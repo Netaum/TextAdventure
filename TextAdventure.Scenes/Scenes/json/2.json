@@ -1,0 +1,20 @@
+{
+    "conditions": null,
+    "description": "Sharpness? Silverness? She must be talking about the Silver Dagger you found on body of the goblin thief.\nQuickly you take out the gleaming blade.\nThe Spider-Queen's eyes practically bulge out of her head as the eight black orbs catch sight of the dagger glittering in the light of the crystal formations.\n'My sharpness! My pretty silverness!' she shrieks.\n'Give it to me, thief.'\n'Or shall I have to take it from you?'\nShe stalks towards you over the desiccated husks of men and dwarfs that litter the floor of her chamber.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Throw the Silver Dagger at the monster.",
+            "key": "throw",
+            "sceneId": "67"
+        },
+        {
+            "description": "Keep a tight hold on it.",
+            "key": "keep",
+            "sceneId": "162"
+        }
+    ],
+    "id": "2",
+    "nextScene": null
+}

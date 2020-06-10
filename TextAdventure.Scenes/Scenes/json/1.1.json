@@ -1,0 +1,25 @@
+{
+    "conditions": null,
+    "description": "With the wolf pack sleadily closing in on you, and the great wolf tensed ready to attack in an instant, you are going to have to act fast and use all your cunning if you are ever going to get out of this dire situation alive.\nWill you:",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Turn your back on the wolf and try to run for it.",
+            "key": "run",
+            "sceneId": "43"
+        },
+        {
+            "description": "Stand your ground and prepare to meet the Black Wolf's inevitable attack.",
+            "key": "attack",
+            "sceneId": "66"
+        },
+        {
+            "description": "Seize the initiative and charge the wolf.",
+            "key": "charge",
+            "sceneId": "147"
+        }
+    ],
+    "id": "1.1",
+    "nextScene": null
+}

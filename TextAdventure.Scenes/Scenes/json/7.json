@@ -1,0 +1,60 @@
+{
+    "conditions": null,
+    "description": "Being mindful not to return to anywhere you have already been, which floor will you now explore?",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Crypt.",
+            "key": "crypt",
+            "sceneId": "297"
+        },
+        {
+            "description": "Cellar.",
+            "key": "cellar",
+            "sceneId": "138"
+        },
+        {
+            "description": "Ground floor.",
+            "key": "ground",
+            "sceneId": "126"
+        },
+        {
+            "description": "First floor.",
+            "key": "first",
+            "sceneId": "187"
+        },
+        {
+            "description": "Second floor.",
+            "key": "second",
+            "sceneId": "217"
+        },
+        {
+            "description": "Third floor.",
+            "key": "third",
+            "sceneId": "348"
+        },
+        {
+            "description": "Fourth floor.",
+            "key": "fourth",
+            "sceneId": "284"
+        },
+        {
+            "description": "Fifth floor.",
+            "key": "fifth",
+            "sceneId": "408"
+        },
+        {
+            "description": "Sixth floor.",
+            "key": "sixth",
+            "sceneId": "435"
+        },
+        {
+            "description": "Seventh floor.",
+            "key": "seventh",
+            "sceneId": "273"
+        }
+    ],
+    "id": "7",
+    "nextScene": null
+}

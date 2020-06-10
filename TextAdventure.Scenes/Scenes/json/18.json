@@ -1,0 +1,38 @@
+{
+    "conditions": null,
+    "description": "The savage Shuck is upon you.\nThis demon dog has terrorised would-be pilgrirns making the journey to the healing shrine of Saint Crucius for long enough.\nTonight, its reign of terror must come to an end.",
+    "enemies": [
+        {
+            "moveConditions": [
+                {
+                    "attribute": "",
+                    "checkCondition": "greater",
+                    "nextScene": "30",
+                    "type": "consWinAttack",
+                    "value": "3"
+                },
+                {
+                    "attribute": "combatTurn",
+                    "checkCondition": "equal",
+                    "nextScene": "99",
+                    "type": "attributeCheck",
+                    "value": "7"
+                },
+                {
+                    "attribute": "",
+                    "checkCondition": "",
+                    "nextScene": "113",
+                    "type": "win",
+                    "value": ""
+                }
+            ],
+            "name": "SHUCK",
+            "skill": "7",
+            "stamina": "7"
+        }
+    ],
+    "enemySpawner": null,
+    "exits": null,
+    "id": "18",
+    "nextScene": null
+}
