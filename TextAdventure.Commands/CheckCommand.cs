@@ -31,9 +31,19 @@ namespace TextAdventure.Commands
 				controller.DisplayPlayerInventory();
 			}
 
+			if (verb == "equipment")
+			{
+				controller.DisplayPlayerEquipment();
+			}
+
 			if (verb == "stats")
 			{
 				controller.DisplayPlayerStats();
+			}
+
+			if(verb == "choices")
+			{
+				controller.DisplaySceneExits();
 			}
 		}
 	}

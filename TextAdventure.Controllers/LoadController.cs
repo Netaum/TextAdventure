@@ -49,6 +49,7 @@ namespace TextAdventure.Controllers
 					jsonSettings = new JsonSerializerSettings
 					{
 						ContractResolver = new DefaultContractResolver(),
+						NullValueHandling = NullValueHandling.Ignore
 					};
 				}
 
@@ -70,10 +71,9 @@ namespace TextAdventure.Controllers
 			return JsonConvert.DeserializeObject<IScene>(file, Instance);
 		}
 
-		public IList<IInteractableObject> LoadGameItens()
+		public IList<IInteractableObject> LoadGameItens(string filePath = "/Scenes/json/game/items.json")
 		{
-			var fileName = $"/Itens/items.json";
-			var file = TextAdventure.Common.Tools.Tools.ReadFile(fileName);
+			var file = TextAdventure.Common.Tools.Tools.ReadFile(filePath);
 			return JsonConvert.DeserializeObject<IList<IInteractableObject>>(file, Instance);
 		}
 	}

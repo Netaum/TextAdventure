@@ -9,9 +9,9 @@ namespace TextAdventure.Interfaces.Entities
 		string Description { get; }
 		string Key { get; }
 		EquipmentType? EquipmentType { get; }
-		IList<IInteraction> Interactions { get; }
+		IList<Interactions.IInteraction> Interactions { get; }
 		IList<string> Keywords { get; }
 		IDictionary<EnemyType, int> Damages { get; }
-		IInteraction GetInteraction(PlayerCommands action);
+		Interactions.IInteraction GetInteraction(PlayerCommands action);
 	}
 }

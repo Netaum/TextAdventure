@@ -43,9 +43,9 @@ namespace TextAdventure.Controllers
 			this.loadController = loadController;
 			commands = InputCommand.GetAllCommands();
 			scenes = new Dictionary<string, IScene>();
-			gameItens = new List<IInteractableObject>();
+			gameItens = loadController.LoadGameItens("/Scenes/json/game/items.json");
 			Navigator = new Navigator(this);
-			Player = new Player(this);
+			Player = new Player(this, allItens: gameItens);
 			MovePlayer("0", null, null);
 		}
 
@@ -83,6 +83,12 @@ namespace TextAdventure.Controllers
 			return CurrentScene.Enemies.Any();
 		}
 
+		public void PlayerEquipItem(string itemName)
+		{
+			var equiped = Player.EquipItem(itemName);
+			if(equiped)
+				displayController.DisplayText($"You equiped {itemName}");
+		}
 		public void AddCodeword(string codeword)
 		{
 			Player.CodeWords.Add(codeword);
@@ -105,8 +111,6 @@ namespace TextAdventure.Controllers
 			Navigator.SetNextScene(scene);
 			Player.EnterScene(scene);
 			StartScene();
-			//var description = moveDescription ?? $"You moved to {scene.Name}";
-			//displayController.DisplayText(description);
 		}
 
 		public void AddItemToPlayer(string itemName)
@@ -237,6 +241,12 @@ namespace TextAdventure.Controllers
 		{
 			displayController.DisplayPlayerInventory(Player);
 		}
+
+		public void DisplayPlayerEquipment()
+		{
+			displayController.DisplayPlayerEquipment(Player);
+		}
+
 		public void DisplayPlayerStats()
 		{
 			displayController.DisplayPlayerStats(Player);
@@ -264,6 +274,11 @@ namespace TextAdventure.Controllers
 			var winCondition = new WinCondition(nextScene);
 			enemy.CombatConditions.Add(winCondition);
 			CurrentScene.Enemies.Add(enemy);
+		}
+
+		public void DisplaySceneExits()
+		{
+			displayController.DisplayText(CurrentScene.GetExitsDescription());
 		}
 		private IScene GetScene(string sceneName)
 		{

@@ -1,13 +1,23 @@
 using System.Collections.Generic;
 using System.Linq;
-using TextAdventure.Interfaces;
+using Newtonsoft.Json;
 using TextAdventure.Interfaces.Enums;
+using TextAdventure.Interfaces.Interactions;
+
 namespace TextAdventure.Entities
 {
 	public class InteractableObject : TextAdventure.Interfaces.Entities.IInteractableObject
 	{
-		public InteractableObject()
+		[JsonConstructor]
+		public InteractableObject(string name,
+								  string key,
+								  string description,
+								  EquipmentType? type)
 		{
+			Name = name;
+			Description = description;
+			Key = key;
+			EquipmentType = type;
 			Interactions = new List<IInteraction>();
 			Keywords = new List<string>();
 			Damages = new Dictionary<EnemyType, int>();

@@ -18,13 +18,14 @@ namespace TextAdventure.ConsoleApp
 	{
 		static void Main(string[] args)
 		{
+			var loadOrigin = TextAdventure.Common.Tools.Tools.ParseEnum<LoadSceneOrigin>(args[0]);
+			string cenario = args.Length <= 1 ? null : args[1];
 			var display = new Controllers.DisplayController();
-			var loader = new Controllers.LoadController(LoadSceneOrigin.Cenarios, args[0]);
+			var loader = new Controllers.LoadController(loadOrigin, cenario);
 
             var controller = new Controllers.GameController(display, loader);
             var t = RunGame2(controller);
             t.Wait();
-			
 		}
 
 		private static Task RunGame2(TextAdventure.Controllers.GameController controller)

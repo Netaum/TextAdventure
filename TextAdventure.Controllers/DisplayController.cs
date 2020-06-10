@@ -34,18 +34,35 @@ namespace TextAdventure.Controllers
 
 		public void DisplayEnemyList(IEnumerable<IEnemy> enemies)
 		{
-            var builder = new StringBuilder();
+            var display = GetEnemiesString(enemies);
+			DisplayText(display);
+		}
+
+		private string GetEnemiesInScene(IScene scene)
+		{
+			if(!scene.Enemies.Any())
+				return null;
+			return GetEnemiesString(scene.Enemies);
+		}
+
+		private string GetEnemiesString(IEnumerable<IEnemy> enemies)
+		{
+			var builder = new StringBuilder();
+			string title = $"------  ENEMIES ------";
+			builder.AppendLine(title);
 			foreach(var (enemy, index) in enemies.WithIndex())
 			{
-				builder.AppendLine($"{index + 1} - {enemy.Name}");
+				builder.AppendLine($"{index + 1} - {enemy.Name} ({enemy.EnemyType})");
 			}
-			DisplayText(builder.ToString());
+			return builder.ToString();
 		}
 
 		public void DisplaySceneDescription(IScene scene)
 		{
 			var objectDescription = GetObjectsDescriptionInScene(scene);
 			var exitDescription = GetExitsDescriptionInScene(scene);
+			var enemyDescription = GetEnemiesInScene(scene);
+
 			var builder = new StringBuilder();
 
 			builder.AppendLine(scene.Description);
@@ -55,6 +72,9 @@ namespace TextAdventure.Controllers
 
 			if (!string.IsNullOrEmpty(exitDescription))
 				builder.AppendLine(exitDescription);
+
+			if (!string.IsNullOrEmpty(enemyDescription))
+				builder.AppendLine(enemyDescription);
 
 			DisplayText(builder.ToString());
 		}
@@ -71,6 +91,17 @@ namespace TextAdventure.Controllers
 			builder.AppendLine($"Gold - {player.Gold}");
 			builder.AppendLine($"Provisions - {player.Provisions}");
 
+			DisplayText(builder.ToString());
+		}
+
+		public void DisplayPlayerEquipment(IPlayer player)
+		{
+			var builder = new StringBuilder();
+			builder.AppendLine("You have the following itens equiped: ");
+			foreach(var equip in player.Equipment)
+			{
+				builder.AppendLine($"- {equip.Value.Name} ({equip.Key})");
+			}
 			DisplayText(builder.ToString());
 		}
 

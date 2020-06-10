@@ -5,8 +5,6 @@ namespace TextAdventure.Interfaces.Controllers
 {
 	public interface IGameController
 	{
-		//TextAdventure.Interfaces.Entities.INavigator Navigator { get; }
-		//TextAdventure.Interfaces.Entities.IPlayer Player { get; }
 		void MovePlayer(string destinationScene, string currentScene, string moveDescription);
 		void AddItemToPlayer(string itemName);
 		void RemoveItemFromPlayer(string itemName);
@@ -17,15 +15,15 @@ namespace TextAdventure.Interfaces.Controllers
 		bool HasEnemies();
 		void PlayerAttackEnemy();
 		void StartScene();
-
 		void DisplayEnemyInformation(int? enemy = null);
 		void SpawnEnemy(string name, int skill, int stamina, EnemyType type, string nextScene);
 		void DisplayPlayerInventory();
+		void DisplayPlayerEquipment();
 		void DisplayPlayerStats();
 		void RespondCommandChoice(string choice);
-
 		Scenes.IScene CurrentScene { get; }
-
 		IInputCommand GetInputCommand(string command);
+		void DisplaySceneExits();
+		void PlayerEquipItem(string itemName);
 	}
 }

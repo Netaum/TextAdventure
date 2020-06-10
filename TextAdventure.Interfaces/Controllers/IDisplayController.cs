@@ -9,6 +9,7 @@ namespace TextAdventure.Interfaces.Controllers
 		void DisplayEnemyDescription(Entities.IEnemy enemy);
 		void DisplayEnemyList(IEnumerable<Entities.IEnemy> enemies);
 		void DisplayPlayerInventory(Entities.IPlayer player);
+		void DisplayPlayerEquipment(Entities.IPlayer player);
 		void DisplayPlayerStats(Entities.IPlayer player);
 	}
 }

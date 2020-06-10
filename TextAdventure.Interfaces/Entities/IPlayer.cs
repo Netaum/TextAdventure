@@ -14,17 +14,18 @@ namespace TextAdventure.Interfaces.Entities
 		Scenes.IScene CurrentScene { get; }
 		IList<string> CodeWords { get; }
 		IList<string> NotesClues { get; }
-		IList<Entities.IInteractableObject> Inventory { get; }
+		IEnumerable<Entities.IInteractableObject> Inventory { get; }
 		IDictionary<EquipmentType, Entities.IInteractableObject> Equipment { get; }
 		void AddItem(Entities.IInteractableObject item);
 		(int, AttackResult) AttackEnemy(Entities.IEnemy enemy, int? attackRoll = null);
 		void DecreaseStat(int value, Stats stat);
 		void EnterScene(Scenes.IScene scene);
 		bool EquipItem(string itemName);
+		bool UnequipItem(string itemName);
 		bool HasItem(string item);
 		void IncreaseStat(int value, Stats stat);
 		bool ReceiveDamage(int damage);
 		bool RemoveItem(string itemName);
-		IResponseAction TryDoActionOnItem(PlayerCommands action, string itemName);
+		Interactions.IResponseAction TryDoActionOnItem(PlayerCommands action, string itemName);
 	}
 }

@@ -28,16 +28,17 @@ namespace TextAdventure.Entities
 		public IScene CurrentScene { get; private set; }
 		public IList<string> CodeWords { get; private set; }
 		public IList<string> NotesClues { get; private set; }
-		public IList<IInteractableObject> Inventory { get; private set; }
+		private List<IInteractableObject> inventory;
+		public IEnumerable<IInteractableObject> Inventory { get { return inventory; } }
 		public IDictionary<EquipmentType, IInteractableObject> Equipment { get; private set; }
-
+		private IDictionary<string, IInteractableObject> allDictItems;
 		public Player(IGameController controller,
-					  bool testChar = false)
+					  bool testChar = false,
+					  IList<IInteractableObject> allItens = null)
 		{
 			this.controller = controller;
 			CodeWords = new List<string>();
 			NotesClues = new List<string>();
-			Inventory = new List<IInteractableObject>();
 			Equipment = new Dictionary<EquipmentType, IInteractableObject>();
 
 			var type = this.GetType();
@@ -59,9 +60,16 @@ namespace TextAdventure.Entities
 				{Stats.Luck, type.GetField(nameof(originalLuck), BindingFlags.NonPublic | BindingFlags.Instance) },
 			};
 
+			inventory = new List<IInteractableObject>();
+
+			if (allItens != null)
+				BuildItemManagement(allItens);
+
 			if (testChar)
 				CreateTestChar();
 			else CreateNewChar();
+
+
 		}
 
 		public void EnterScene(IScene scene)
@@ -69,16 +77,17 @@ namespace TextAdventure.Entities
 			CurrentScene = scene;
 		}
 
-		public bool HasItem(string item)
+		public bool HasItem(string itemName)
 		{
-			return Inventory.Any(a => a.Name == item);
+			var item = GetItem(itemName);
+			return Inventory.Contains(item);
 		}
 
 		public void AddItem(IInteractableObject item)
 		{
 			if (HasItem(item.Name))
 				return;
-			Inventory.Add(item);
+			inventory.Add(item);
 		}
 
 		public bool RemoveItem(string itemName)
@@ -86,12 +95,8 @@ namespace TextAdventure.Entities
 			if (!HasItem(itemName))
 				return false;
 
-			var item = Inventory.Single(s => s.Name == itemName);
-			Inventory.Remove(item);
-
-			if (item.EquipmentType != null && Equipment.ContainsKey(item.EquipmentType.Value))
-				Equipment.Remove(item.EquipmentType.Value);
-
+			var item = GetItem(itemName);
+			inventory.Remove(item);
 			return true;
 		}
 
@@ -100,24 +105,61 @@ namespace TextAdventure.Entities
 			if (!HasItem(itemName))
 				return false;
 
-			var item = Inventory.Single(s => s.Name == itemName);
+			var item = GetItem(itemName);
 			if (item.EquipmentType is null)
 				return false;
 
+			inventory.Remove(item);
 			if (!Equipment.ContainsKey(item.EquipmentType.Value))
 			{
 				Equipment.Add(item.EquipmentType.Value, item);
 			}
 			else
 			{
+				var oldItem = Equipment[item.EquipmentType.Value];
 				Equipment[item.EquipmentType.Value] = item;
+				inventory.Add(oldItem);
 			}
+
 			return true;
 		}
 
-		public Interfaces.IResponseAction TryDoActionOnItem(PlayerCommands action, string itemName)
+		public bool UnequipItem(string itemName)
 		{
-			var item = Inventory.FirstOrDefault(f => f.Name == itemName);
+			if (!HasItem(itemName))
+				return false;
+
+			var item = GetItem(itemName);
+			if (item.EquipmentType is null)
+				return false;
+
+			if (!Equipment.ContainsKey(item.EquipmentType.Value))
+			{
+				return false;
+			}
+
+			inventory.Add(item);
+			Equipment.Remove(item.EquipmentType.Value);
+
+			return true;
+		}
+
+		private IInteractableObject GetItem(string itemName)
+		{
+			var key = itemName
+					  .Replace(" ", string.Empty)
+					  .ToLowerInvariant();
+			if (allDictItems.ContainsKey(key))
+			{
+				return allDictItems[key];
+			}
+
+			return null;
+		}
+
+		public Interfaces.Interactions.IResponseAction TryDoActionOnItem(PlayerCommands action, string itemName)
+		{
+			var item = GetItem(itemName);
 			if (item == null)
 				return null;
 
@@ -177,7 +219,17 @@ namespace TextAdventure.Entities
 				prop.SetValue(this, newValue);
 		}
 
-
+		private void BuildItemManagement(IList<IInteractableObject> allObjects)
+		{
+			allDictItems = new Dictionary<string, IInteractableObject>();
+			foreach (var obj in allObjects)
+			{
+				var key = obj.Name
+							 .Replace(" ", string.Empty)
+							 .ToLowerInvariant();
+				allDictItems.Add(key, obj);
+			}
+		}
 		private int GetAttack()
 		{
 			return Skill + Common.Tools.StaticRandom.RollDice(2);
@@ -216,6 +268,20 @@ namespace TextAdventure.Entities
 			Gold = goldValue ?? StaticRandom.Instance.Next(2, 13) + 6;
 
 			Provisions = 0;
+
+			string[] initialItens = new string[] { "Sword","Insect Spray", "Leather Armour", "Lantern", "Tinderbox"};
+			string[] initialEquipments = new string[] { "Sword", "Leather Armour" };
+
+			foreach(var stringItem in initialItens)
+			{
+				var item = GetItem(stringItem);
+				AddItem(item);
+			}
+
+			foreach(var equipItem in initialEquipments)
+			{
+				EquipItem(equipItem);
+			}
 		}
 		private void CreateTestChar()
 		{

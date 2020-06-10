@@ -11,6 +11,7 @@ namespace TextAdventure.Interfaces.Enums
          Sheet,
          Stats,
          Choose,
-         Check
+         Check,
+         Equip
     }
 }

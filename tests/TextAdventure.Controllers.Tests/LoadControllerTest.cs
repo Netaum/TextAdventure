@@ -92,5 +92,14 @@ namespace TextAdventure.Controllers.Tests
             Assert.Null(scene.NextScene);
             Assert.NotNull(scene.EnemySpawner);
         }
+
+        [Fact]
+        public void LoadItens_ShouldLoad()
+        {
+            var testFile = "/Scenes/json/game/items.json";
+            var itens = controller.LoadGameItens(testFile);
+            Assert.NotNull(itens);
+            Assert.NotEmpty(itens);
+        }
     }
 }

@@ -6,6 +6,7 @@ namespace TextAdventure.Interfaces.Enums
         WereCreature,
         Undead,
         Human,
-        Animal
+        Animal,
+        Vermin
     }
 }

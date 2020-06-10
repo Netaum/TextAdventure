@@ -4,6 +4,7 @@
     "enemies": null,
     "enemySpawner": {
         "enemyCountModifier": 1,
+        "type": "vermin",
         "name": "GIANT SPIDER HATCHLING",
         "nextScene": "1",
         "numberOfDice": 1,

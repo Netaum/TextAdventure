@@ -1,11 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using Moq;
 using TextAdventure.Interfaces.Controllers;
 using TextAdventure.Interfaces.Entities;
 using TextAdventure.Interfaces.Enums;
+using TextAdventure.Interfaces.Interactions;
 using TextAdventure.Interfaces.Scenes;
-using IInteraction = TextAdventure.Interfaces.IInteraction;
-using IResponseAction = TextAdventure.Interfaces.IResponseAction;
 using Xunit;
 
 namespace TextAdventure.Entities.Tests
@@ -45,7 +45,7 @@ namespace TextAdventure.Entities.Tests
 			item.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			player.Inventory.Add(item.Object);
+			player.AddItem(item.Object);
 
 			var resp = player.HasItem("test item");
 			Assert.False(resp);
@@ -58,7 +58,7 @@ namespace TextAdventure.Entities.Tests
 			item.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			player.Inventory.Add(item.Object);
+			player.AddItem(item.Object);
 
 			var resp = player.HasItem("Item 01");
 			Assert.True(resp);
@@ -104,7 +104,7 @@ namespace TextAdventure.Entities.Tests
 
 			player.AddItem(item1.Object);
 			player.AddItem(item2.Object);
-			Assert.Equal(2, player.Inventory.Count);
+			Assert.Equal(2, player.Inventory.Count());
 		}
 
 		[Fact]
@@ -121,7 +121,7 @@ namespace TextAdventure.Entities.Tests
 			item2.Setup(s => s.Name)
 				.Returns("Item 02");
 
-			player.Inventory.Add(item2.Object);
+			player.AddItem(item2.Object);
 
 			var resp = player.RemoveItem("Item 01");
 			Assert.False(resp);
@@ -134,7 +134,7 @@ namespace TextAdventure.Entities.Tests
 			item2.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			player.Inventory.Add(item2.Object);
+			player.AddItem(item2.Object);
 
 			var resp = player.RemoveItem("Item 01");
 			Assert.True(resp);
@@ -151,12 +151,12 @@ namespace TextAdventure.Entities.Tests
 			item2.Setup(s => s.EquipmentType)
 				 .Returns(EquipmentType.Weapon);
 
-			player.Inventory.Add(item2.Object);
+			player.AddItem(item2.Object);
 			player.Equipment.Add(EquipmentType.Weapon, item2.Object);
 
 			var resp = player.RemoveItem("Item 01");
 			Assert.True(resp);
-			Assert.Empty(player.Equipment);
+			Assert.NotEmpty(player.Equipment);
 		}
 
 		[Fact]
@@ -173,7 +173,7 @@ namespace TextAdventure.Entities.Tests
 			item2.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			player.Inventory.Add(item2.Object);
+			player.AddItem(item2.Object);
 
 			var resp = player.EquipItem("Item 02");
 			Assert.False(resp);
@@ -186,7 +186,7 @@ namespace TextAdventure.Entities.Tests
 			item2.Setup(s => s.Name)
 				.Returns("Item 01");
 
-			player.Inventory.Add(item2.Object);
+			player.AddItem(item2.Object);
 
 			var resp = player.EquipItem("Item 01");
 			Assert.False(resp);
@@ -202,7 +202,7 @@ namespace TextAdventure.Entities.Tests
 			item2.Setup(s => s.EquipmentType)
 				 .Returns(EquipmentType.Weapon);
 
-			player.Inventory.Add(item2.Object);
+			player.AddItem(item2.Object);
 
 			var resp = player.EquipItem("Item 01");
 			Assert.True(resp);
@@ -225,8 +225,8 @@ namespace TextAdventure.Entities.Tests
 			item2.Setup(s => s.EquipmentType)
 				 .Returns(EquipmentType.Weapon);
 
-			player.Inventory.Add(item1.Object);
-			player.Inventory.Add(item2.Object);
+			player.AddItem(item1.Object);
+			player.AddItem(item2.Object);
 			player.Equipment.Add(EquipmentType.Weapon, item2.Object);
 
 			var resp = player.EquipItem("Item 01");
@@ -248,7 +248,7 @@ namespace TextAdventure.Entities.Tests
 			item1.Setup(s => s.Name)
 				.Returns("Item 02");
 
-			player.Inventory.Add(item1.Object);
+			player.AddItem(item1.Object);
 
 			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.Null(result);
@@ -264,7 +264,7 @@ namespace TextAdventure.Entities.Tests
 			item1.Setup(s => s.GetInteraction(It.IsAny<PlayerCommands>()))
 				 .Returns((IInteraction)null);
 
-			player.Inventory.Add(item1.Object);
+			player.AddItem(item1.Object);
 
 			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.Null(result);
@@ -282,7 +282,7 @@ namespace TextAdventure.Entities.Tests
 			item1.Setup(s => s.GetInteraction(It.IsAny<PlayerCommands>()))
 				 .Returns(interaction.Object);
 
-			player.Inventory.Add(item1.Object);
+			player.AddItem(item1.Object);
 
 			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.Null(result);
@@ -305,7 +305,7 @@ namespace TextAdventure.Entities.Tests
 			item1.Setup(s => s.GetInteraction(It.IsAny<PlayerCommands>()))
 				 .Returns(interaction.Object);
 
-			player.Inventory.Add(item1.Object);
+			player.AddItem(item1.Object);
 
 			var result = player.TryDoActionOnItem(PlayerCommands.Use, "Item 01");
 			Assert.NotNull(result);

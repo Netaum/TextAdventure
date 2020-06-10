@@ -16,7 +16,6 @@ namespace TextAdventure.Commands
 		}
 		public PlayerCommands Command { get; private set; }
 		public abstract void RespondToInput(IGameController controller, string[] commands);
-
 		public static IList<IInputCommand> GetAllCommands()
 		{
 			var list = new List<IInputCommand>();

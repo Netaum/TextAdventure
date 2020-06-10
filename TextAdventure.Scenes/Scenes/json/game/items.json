@@ -1,0 +1,92 @@
+[
+	{
+		"name": "Sword",
+		"description": "An old sword.",
+		"key": "sword",
+		"type": "weapon",
+		"damages": {
+			"default": 2
+		},
+		"keyWords": [
+			"init"
+		],
+		"interactions": [
+			{
+				"action": "use",
+				"responseDescription": "You rise your sword."
+			},
+			{
+				"action": "inspect",
+				"responseDescription": "An old and battered sword. Can do some damage, maybe."
+			}
+		]
+	},
+	{
+		"name": "Insect Spray",
+		"description": "Insect poison",
+		"key": "poison",
+		"type": "weapon",
+		"damages": {
+			"default": 0,
+			"vermin": 4
+		},
+		"keyWords": [
+			"init"
+		],
+		"interactions": [
+			{
+				"action": "use",
+				"responseDescription": "You rise your sword."
+			},
+			{
+				"action": "inspect",
+				"responseDescription": "An old and battered sword. Can do some damage, maybe."
+			}
+		]
+	},
+	{
+		"name": "Leather Armour",
+		"description": "A leather armour.",
+		"key": "armour",
+		"type": "armour",
+		"keyWords": [
+			"init"
+		],
+		"interactions": [
+			{
+				"action": "inspect",
+				"responseDescription": "A leather armour. It's really worn out."
+			}
+		]
+	},
+	{
+		"name": "Lantern",
+		"description": "A lanteren.",
+		"key": "lanter",
+		"type": null,
+		"keyWords": [
+			"init"
+		],
+		"interactions": [
+			{
+				"action": "inspect",
+				"responseDescription": "A oil lantern. Can guide you in dark places."
+			}
+		]
+	},
+	{
+		"name": "Tinderbox",
+		"description": "A box with tinder matches",
+		"key": "tinderbox",
+		"type": null,
+		"keyWords": [
+			"init"
+		],
+		"interactions": [
+			{
+				"action": "inspect",
+				"responseDescription": "A box of matches. If you need a light."
+			}
+		]
+	}
+]
