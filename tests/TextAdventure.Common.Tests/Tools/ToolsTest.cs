@@ -81,14 +81,14 @@ namespace TextAdventure.Common.Tests.Tools
 
 		[Theory]
 		[InlineData("add", CheckCondition.Add)]
-		[InlineData("addP", CheckCondition.AddP)]
+		[InlineData("addP", CheckCondition.Increase)]
 		[InlineData("equal", CheckCondition.Equal)]
 		[InlineData("greater", CheckCondition.Greater)]
 		[InlineData("greaterOrEqual", CheckCondition.GreaterOrEqual)]
 		[InlineData("less", CheckCondition.Less)]
 		[InlineData("lessOrEqual", CheckCondition.LessOrEqual)]
 		[InlineData("subtract", CheckCondition.Subtract)]
-		[InlineData("subtractP", CheckCondition.SubtractP)]
+		[InlineData("subtractP", CheckCondition.Decrease)]
 		public void ParseCheckConditionShouldWork(string attribute, CheckCondition checkExpected)
 		{
 			var result = ParseTool.Tools.ParseEnum<CheckCondition>(attribute);

@@ -9,7 +9,7 @@ namespace TextAdventure.Interfaces.Enums
         GreaterOrEqual,
         Add,
         Subtract,
-        AddP,
-        SubtractP
+        Increase,
+        Decrease
     }
 }

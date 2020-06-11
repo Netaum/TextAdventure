@@ -9,12 +9,13 @@ namespace TextAdventure.Interfaces.Entities
 		int Skill { get; }
 		int Stamina { get; }
 		int CombatTurn { get; }
+		int ConsecutiveWinTurns { get; }
 		EnemyType EnemyType { get; }
 		IList<Conditions.ICondition> CombatConditions { get; }
 		void CheckConditions(Controllers.IGameController controller);
 		int GetAttack();
+		int GetDamage();
 		void ReceiveDamage(int damageReceived = 2);
 		bool IsDead();
-		string PrintStats();
 	}
 }

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Text;
 using TextAdventure.Interfaces.Conditions;
 using TextAdventure.Interfaces.Controllers;
 using TextAdventure.Interfaces.Entities;
@@ -13,6 +12,7 @@ namespace TextAdventure.Entities
 		public int Skill { get; private set; }
 		public int Stamina { get; private set; }
 		public int CombatTurn { get; private set; }
+		public int ConsecutiveWinTurns { get; private set; }
 		public IList<ICondition> CombatConditions { get; private set; }
 		public EnemyType EnemyType { get; private set; }
 
@@ -26,6 +26,7 @@ namespace TextAdventure.Entities
 			Stamina = stamina;
 			EnemyType = type;
 			CombatTurn = 0;
+			ConsecutiveWinTurns = 0;
 			CombatConditions = new List<ICondition>();
 		}
 
@@ -33,6 +34,12 @@ namespace TextAdventure.Entities
 		{
 			CombatTurn++;
 			return Skill + Common.Tools.StaticRandom.RollDice(2);
+		}
+
+		public int GetDamage()
+		{
+			ConsecutiveWinTurns++;
+			return 2;
 		}
 
 		public void CheckConditions(IGameController controller)
@@ -46,24 +53,14 @@ namespace TextAdventure.Entities
 				}
 			}
 		}
-
 		public void ReceiveDamage(int damageReceived = 2)
 		{
+			ConsecutiveWinTurns = 0;
 			Stamina -= damageReceived;
 		}
-
         public bool IsDead()
         {
             return Stamina <= 0;
-        }
-
-		public string PrintStats()
-        {
-            var builder = new StringBuilder();
-			builder.AppendLine($"NAME: {Name}");
-			builder.AppendLine($"SKILL: {Skill}");
-			builder.AppendLine($"STAMINA: {Stamina}");
-            return builder.ToString();
         }
 	}
 }

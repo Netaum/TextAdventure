@@ -18,7 +18,9 @@ namespace TextAdventure.Controllers
 		private readonly IList<CheckCondition> changeStatsConditions = new List<CheckCondition>
 		{
 			CheckCondition.Add,
-			CheckCondition.Subtract
+			CheckCondition.Subtract,
+			CheckCondition.Increase,
+			CheckCondition.Decrease
 		};
 		private readonly IDictionary<string, IScene> scenes;
 		private readonly IList<IInteractableObject> gameItens;
@@ -115,9 +117,8 @@ namespace TextAdventure.Controllers
 
 		public void AddItemToPlayer(string itemName)
 		{
-			var item = gameItens.Single(s => s.Name == itemName);
-			Player.AddItem(item);
-			string description = $"The item {itemName} was added to your inventory.";
+			Player.AddItem(itemName);
+			string description = $"The item '{itemName}' was added to your inventory.";
 			displayController.DisplayText(description);
 		}
 
@@ -153,11 +154,27 @@ namespace TextAdventure.Controllers
 				throw new System.Exception($"Invalid condition ({condition}) to change stats.");
 			}
 
-			string changed = condition == CheckCondition.Add ? "increased" : "decreased";
+			string changed = string.Empty;
 
-			if (condition == CheckCondition.Add)
-				Player.IncreaseStat(value, stat);
-			else Player.DecreaseStat(value, stat);
+			switch(condition)
+			{
+				case CheckCondition.Add:
+					Player.IncreaseStat(value, stat);
+					changed = "increased";
+				break;
+				case CheckCondition.Increase:
+					Player.IncreaseStat(value, stat, true);
+					changed = "raised";
+				break;
+				case CheckCondition.Subtract:
+					Player.DecreaseStat(value, stat);
+					changed = "decreased";
+				break;
+				case CheckCondition.Decrease:
+					Player.DecreaseStat(value, stat);
+					changed = "reduced";
+				break;
+			}
 
 			displayController.DisplayText($"You stat {stat} {changed} by {value}.");
 		}

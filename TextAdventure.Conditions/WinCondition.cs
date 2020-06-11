@@ -8,7 +8,7 @@ namespace TextAdventure.Conditions
 	{
         public WinCondition(string nextScene)
         {
-            Type = nameof(AttributeCheckCondition);
+            Type = nameof(WinCondition);
             NextScene = nextScene;
         }
 		public override void ApplyCondition(IGameController controller)

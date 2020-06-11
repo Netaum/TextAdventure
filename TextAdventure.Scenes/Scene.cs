@@ -20,7 +20,7 @@ namespace TextAdventure.Scenes
 		public IEnemySpawner EnemySpawner { get; protected set; }
 
 		[JsonConstructor]
-		protected Scene(string id,
+		public Scene(string id,
 						string name,
 						string description,
 						string nextScene,

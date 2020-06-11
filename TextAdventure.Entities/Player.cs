@@ -90,6 +90,14 @@ namespace TextAdventure.Entities
 			inventory.Add(item);
 		}
 
+		public void AddItem(string itemName)
+		{
+			if (HasItem(itemName))
+				return;
+			var item = GetItem(itemName);
+			inventory.Add(item);
+		}
+
 		public bool RemoveItem(string itemName)
 		{
 			if (!HasItem(itemName))
@@ -195,28 +203,50 @@ namespace TextAdventure.Entities
 			return Stamina <= 0;
 		}
 
-		public void DecreaseStat(int value, Stats stat)
+		public void DecreaseStat(int value, Stats stat, bool affectOriginalValues = false)
 		{
 			var prop = properties[stat];
 			var newValue = ((int)prop.GetValue(this)) - value;
 			prop.SetValue(this, newValue);
-		}
 
-		public void IncreaseStat(int value, Stats stat)
-		{
-			var prop = properties[stat];
-			var propValue = (int)prop.GetValue(this);
-			int newValue = propValue + value;
-
-			if (originalStats.Contains(stat))
+			if (affectOriginalValues && originalStats.Contains(stat))
 			{
 				var original = originalProperties[stat];
-				int originalValue = (int)original.GetValue(this);
-				if (newValue > originalValue)
-					newValue = originalValue;
+				int newOriginalValue = (int)original.GetValue(this) - value;
+				original.SetValue(this, newOriginalValue);
 			}
-			if (newValue != propValue)
-				prop.SetValue(this, newValue);
+		}
+
+		public void IncreaseStat(int value, Stats stat, bool affectOriginalValues = false)
+		{
+
+			if (affectOriginalValues)
+			{
+				var prop = properties[stat];
+				var newPropValue = (int)prop.GetValue(this) + value; 
+				prop.SetValue(this, newPropValue);
+
+				var original = originalProperties[stat];
+				int newOriginalValue = (int)original.GetValue(this) + value;
+				original.SetValue(this, newOriginalValue);
+			}
+			else
+			{
+				var prop = properties[stat];
+				var propValue = (int)prop.GetValue(this);
+				int newValue = propValue + value;
+
+				if (originalStats.Contains(stat))
+				{
+					var original = originalProperties[stat];
+					int originalValue = (int)original.GetValue(this);
+					if (newValue > originalValue)
+						newValue = originalValue;
+				}
+				if (newValue != propValue)
+					prop.SetValue(this, newValue);
+			}
+
 		}
 
 		private void BuildItemManagement(IList<IInteractableObject> allObjects)
@@ -269,16 +299,16 @@ namespace TextAdventure.Entities
 
 			Provisions = 0;
 
-			string[] initialItens = new string[] { "Sword","Insect Spray", "Leather Armour", "Lantern", "Tinderbox"};
+			string[] initialItens = new string[] { "Sword", "Leather Armour", "Lantern", "Tinderbox" };
 			string[] initialEquipments = new string[] { "Sword", "Leather Armour" };
 
-			foreach(var stringItem in initialItens)
+			foreach (var stringItem in initialItens)
 			{
 				var item = GetItem(stringItem);
 				AddItem(item);
 			}
 
-			foreach(var equipItem in initialEquipments)
+			foreach (var equipItem in initialEquipments)
 			{
 				EquipItem(equipItem);
 			}

@@ -45,6 +45,20 @@
 		]
 	},
 	{
+		"name": "Silver dagger",
+		"description": "Countess Silver Dagger",
+		"key": "silver_dagger",
+		"type": "weapon",
+		"damages": {
+			"default": 1,
+			"wereCreature": 3,
+			"undead": 2
+		},
+		"keyWords": [
+			"magic"
+		]
+	},
+	{
 		"name": "Leather Armour",
 		"description": "A leather armour.",
 		"key": "armour",

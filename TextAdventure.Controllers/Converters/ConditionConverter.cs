@@ -24,43 +24,55 @@ namespace TextAdventure.Controllers.Converters
 				JObject obj = JObject.Load(reader);
 				var type = obj["type"].ToString();
 
-				if(type == "attributeCheck")
+				if (type == "attributeCheck")
 				{
-					return new AttributeCheckCondition((string) obj["attribute"],
-													   (string) obj["checkCondition"],
-													   (string) obj["value"],
-													   (string) obj["nextScene"]);
+					return new AttributeCheckCondition((string)obj["attribute"],
+													   (string)obj["checkCondition"],
+													   (string)obj["value"],
+													   (string)obj["nextScene"]);
 				}
 
-				if(type == "inventory")
+				if (type == "inventory")
 				{
-					return new InventoryCondition((string) obj["checkCondition"],
-												  (string) obj["value"]);
+					return new InventoryCondition((string)obj["checkCondition"],
+												  (string)obj["value"]);
 				}
 
-				if(type == "damage")
+				if (type == "damage")
 				{
-					return new DamageCondition((string) obj["value"],
-											   (string) obj["sourceDescription"]);
+					return new DamageCondition((string)obj["value"],
+											   (string)obj["sourceDescription"]);
 				}
 
-				if(type == "codeword")
+				if (type == "codeword")
 				{
-					return new CodeWordCondition((string) obj["value"]);
+					return new CodeWordCondition((string)obj["value"]);
 				}
 
-				if(type == "statChange")
+				if (type == "statChange")
 				{
-					return new StatChangeCondition((string) obj["attribute"],
-												   (string) obj["checkCondition"],
-												   (string) obj["value"]);
+					return new StatChangeCondition((string)obj["attribute"],
+												   (string)obj["checkCondition"],
+												   (string)obj["value"]);
 				}
 
-				if(type == "win")
+				if (type == "win")
 				{
-					return new WinCondition((string) obj["nextScene"]);
+					return new WinCondition((string)obj["nextScene"]);
 				}
-				
+
+				if (type == "consWinAttack")
+				{
+					return new ConsecutiveWinsCondition((string)obj["checkCondition"],
+													   	(string)obj["value"],
+													   	(string)obj["nextScene"]);
+				}
+
+				if (type == "randomExit")
+				{
+					return new RandomExitCondition((string)obj["value"]);
+				}
+
 				return null;
 			}
 		}

@@ -68,6 +68,12 @@ namespace TextAdventure.Controllers
 		{
 			var fileName = $"/Scenes/json/{fileFolder}/{sceneName}.json";
 			var file = TextAdventure.Common.Tools.Tools.ReadFile(fileName);
+
+			if(file == null)
+			{
+				return new Scenes.Scene("0", "FILE NOT FOUND", $"SCENE {sceneName} NOT FOUND", null, null);
+			}
+
 			return JsonConvert.DeserializeObject<IScene>(file, Instance);
 		}
 

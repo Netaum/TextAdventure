@@ -10,7 +10,7 @@
 			"request": "launch",
 			"preLaunchTask": "build",
 			"program": "${workspaceFolder}/TextAdventure.ConsoleApp/bin/Debug/netcoreapp3.1/TextAdventure.ConsoleApp.dll",
-			"args": ["Cenarios", "01"],
+			"args": ["Cenarios", "05"],
 			"cwd": "${workspaceFolder}/TextAdventure.ConsoleApp",
 			"console": "integratedTerminal",
 			"stopAtEntry": false

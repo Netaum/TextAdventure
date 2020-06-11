@@ -33,6 +33,12 @@ namespace TextAdventure.Common.Tools
 		public static string ReadFile(string file)
 		{
 			var path = Path.Join(AppDomain.CurrentDomain.BaseDirectory, file);
+			
+			if(!File.Exists(path))
+			{
+				return null;
+			}
+
 			using (var reader = new StreamReader(path))
 			{
 				return reader.ReadToEnd();

@@ -54,12 +54,12 @@ class Enemy:
 		self.name = name
 		self.skill = skill
 		self.stamina = stamina
-		self.moveConditions = None
+		self.combatConditions = None
 
-	def add_move_condition(self, moveCondition):
-		if not self.moveConditions:
-			self.moveConditions = []
-		self.moveConditions.append(moveCondition)
+	def add_move_condition(self, combatCondition):
+		if not self.combatConditions:
+			self.combatConditions = []
+		self.combatConditions.append(moveCondition)
 
 class Spawn:
 	def __init__(self,
