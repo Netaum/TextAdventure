@@ -1,0 +1,75 @@
+{
+	"data": {
+		"classificacao": {
+			"id": 1,
+			"descricao": "Apartamento"
+		},
+		"tipo": {
+			"id": 1,
+			"descricao": "Comercial"
+		},
+		"tipo_garantia": {
+			"id": 2,
+			"descricao": "AlienacaoFiduciaria"
+		},
+		"natureza_imovel": {
+			"id": 1,
+			"descricao": "Novo"
+		},
+		"descricao_classificacao": {
+			"descricao_tipo": "Tipo custom",
+			"descricao_comodos_imovel": "Comodo 1",
+			"area_edificada": 100,
+			"area_terreno": 110,
+			"frente_terreno": 111,
+			"fundo_terreno": 112,
+			"lado_direito_terreno": 113,
+			"lado_esquerdo_terreno": 114,
+			"area_privativa": 115,
+			"area_comum": 116,
+			"area_total": 117,
+			"area_total_iptu": 119
+		},
+		"endereco": {
+			"cep": "14000000",
+			"numero_apartamento": "AP 1",
+			"logradouro": "Endereço 1",
+			"numero": "01",
+			"complemento": "Complemento 1",
+			"lote": "Lote 1",
+			"quadra": "Quadra 1",
+			"subdistrito": "Subdistrito 1",
+			"distrito": "Distrito 1",
+			"uf": "RJ",
+			"cidade": "Cidade 1",
+			"bairro": "Bairro 1",
+			"codigo_municipio": "Codigo 1",
+			"loteamento": "Loteamento 1"
+		},
+		"condominio": true,
+		"construcao_propria": true,
+		"data_habitese": "2020/06/22",
+		"indicio_ocupacao_imovel": true,
+		"numero_unidade": "Unidade 1",
+		"numero_andar": "Andar 1",
+		"denominacao_imovel_contrato": "Contrato 1",
+		"nome_bloco": "Bloco 1",
+		"numero_pavimento": "Pavimento 1",
+		"nome_condominio_conjunto_residencial": "Conjunto H 1",
+		"nome_edificil": "Edificil 1",
+		"codigo_logradouro_rj": "Logradouro RJ",
+		"numero_iptu": "IPTU",
+		"iptu_area_maior": true,
+		"fracao_ideal": "10.1",
+		"valor_venal_imovel_campinas": 100000,
+		"foreiro": true,
+		"servidao": true,
+		"descricao_servidao": "Sem Servidao",
+		"anexo": true,
+		"unidade_autonoma": true,
+		"numero_pa": "Numero PA",
+		"descricao_anexo": "SEM ANEXO",
+		"garantia_adicional": true,
+		"loteamento": "LOTEAMENTO 1"
+	}
+}

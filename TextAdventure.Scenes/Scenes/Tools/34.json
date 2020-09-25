@@ -1,0 +1,27 @@
+{
+    "conditions": [
+        {
+            "attribute": "",
+            "checkCondition": "",
+            "codeWords": "",
+            "sourceDescription": "curse of the Mirror.",
+            "type": "damage",
+            "value": "2d"
+        },
+        {
+            "attribute": "change",
+            "checkCondition": "add",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "In frustation, you hurl a wrought-iron candelabra at the Obsidian Mirror, hoping to reveal its secrets that way.\nThe black glass shatters, splintering into a thousand razor-sharp shards as does your own reflection.\nAt the same time your body has received a multitude of horrendous stabbing wounds wounds and you drop to your knees.\nGasping in agony, you catch a sliver of your reflection in an obsidian splinter. \nThere is something increasingly bestial about the expression that snarls back at you.\nFor your rash action you have suffered the Curse of the Mirror.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "34",
+    "nextScene": "321",
+    "roll": null
+}

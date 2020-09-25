@@ -1,0 +1,35 @@
+{
+    "conditions": [
+        {
+            "attribute": "subtract",
+            "checkCondition": "stamina",
+            "codeWords": "[-Quickening]",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "4"
+        },
+        {
+            "attribute": "subtract",
+            "checkCondition": "skill",
+            "codeWords": "[-Quickening]",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        },
+        {
+            "attribute": "subtract",
+            "checkCondition": "stamina",
+            "codeWords": "[Quickening]",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "The Countess\u2019 servant swoops down on you, seizing your shoulders in its claw-footed grasp. \nWith two strong wing-beats, the Werebat hauls you up into the vault of the dome. \nWhen you are some height above the chamber \ufb02oor, it lets go of you again. \nYou crash down onto the cold marble with boneshattering force.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "36",
+    "nextScene": "68",
+    "roll": null
+}

@@ -1,0 +1,10 @@
+{
+    "conditions": null,
+    "description": "Tugging the rusted grille free of the culvert opening, taking a deep breath, you crawl into the stinking tunnel beyond. \nYou have not gone far when you feel the tunnel angle downwards dramatically and, without any warning, \ufb01nd yourself slipping on the wet slime coating the pipe. \nUnable to control you descent, you slide head \ufb01rst down the tunnel into the foetid darkness beyond.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "39",
+    "nextScene": "194",
+    "roll": null
+}

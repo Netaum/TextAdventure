@@ -1,0 +1,295 @@
+[21:
+With the wolf-monster that has terrorised Lupraviafor so many years lying dead at your feet at last, you become aware of something flapping at the window of the Count's chambers.
+You gasp, truly taken aback to see a striking, platinum haired woman, with skin as white as ivory, wrapped in a black cloak, suspended in the cold night air beyond the glas — the Countess Isolde of Maun.
+A cruel smile spreads across her blood-red lips revealing the points of elongated fangs and she transfixes you once more her mesmerising stare.
+You cannot help yourself as, compelled by a persuasive voice inside your head, you step forward, open the window, and invite the Countess into the tower chamber.
+'Well done, my pet', she purrs.
+'You served me well'.  
+'Ever since the days of the Cadre Infernal I have sought power over these lands, but thanks to the ritual we enacted that night, so many years ago, Count Varcolac of the ruling House of Wulfen has had power over me and the offers'.
+'For as long he lived, and the demon protected him, I could not act against him, nor could Serpensa, the widow Aranaea, or the Abbot'.
+'But now that you, one of his own line, have deposed him, I am free to take up the reins of power ande seize control of Lupravia'.
+
+You are in the thrall of the vampiric Lady of Maun, and have been ever since she bewitched you in her tower.
+So it is that there is nothing you can do to stop her; you are utterly under her control.
+Count Varcolac may be gone, but Lupravia will remain in the grip of evil, now under the rule of the House Of Maun and the Vampiress Isolde.
+You will serve her loyally, as her wolf-thrall.
+When it seemed that, against all the odds, you had beaten the Curse of the Werewolf, the Curse of the Vampire has thwarted you at the last.
+You have failed in your mission.
+{
+-n:E
+}]
+
+[22:
+With such a large target and at such close range there was never any question of you missing.
+The rod buries itself deep inside the torso of the hulking golem but it does not even slow the brute.
+With clanking steps it stalks towards you.
+It is at that moment that lightning strikes the windmill again.
+Scintillating flashes of elemental energy explode around the laboratory, shattering dials and setting fire to banks of arcane equipment.
+All of this raw storm-force finds its way to the lightning rod that you have just plunged into the golem, with devastating effect.
+The man-made monster shudders where it stands, as the full force of the storm passes through its metallic components.
+Its dead flesh cooks to a blackened cinder while its metallic parts melt and fuse together.
+Eventually the whole ruined creation topples over backwards and then crashes onto the floor of the laboratory.
+{
+-c:(statChange:add:luck:1::)
+-n:169
+}]
+
+[23:
+To your left at the base of the wall, where it merges with the natural rock face, is a grilled culvert, the rusted bars clad with moss.
+An unpleasant odour, a blend raw effluent and damp-rot, rises from the tunnel.
+Even without your lycanthropy-heightened senses the stink would make your eyes water.
+You test the resistance of the bars and, with effort, the grille twists in the hole.
+You do not fancy scaling the high, sheer wall in front of you in the pitch darkness, nor, as the temperature drops, do you fancy spending another night in the open.
+{
+-q:Try the culvert.(culvert:39)
+-q:Ring the bell.(ring:58)
+}] 
+
+[24:
+Taking a firm hold of the stones at the lip of the pit you carefully lower yourself over the edge, down into the darkness.
+There are plenty of hand-and-foot-holds to be found but the stones lining the pit are slick with slime.
+The air in the shaft smells of damp, fungal matter.
+{
+-r:(2:lessOrEqual:luck:221:121)
+-c:(statChange:subtract:luck:1::)
+}]
+
+[25:
+It is no good; the lycanthropy has your body within its clawed grip now. 
+With a yowl of intense, bone-wrenching pain, your physical form reshapes itself, growing in height, limbs becoming longer, your pain-contorted features giving way to a lupine muzzle.
+You have become the thing you have fought hard and for so long to thwart.
+Your clothes and leather armour can no longer contain your changing body and are shed along with your human skin, as the hairy wolf's hide rips through from inside.
+{
+-c:(statChange:subtract:luck:2::)
+-c:(statChange:increase:skill:1::)
+-c:(statChange:increase:stamina:2::)
+-c:(inventory:unequip:weapon:::)
+-c:(inventory:unequip:armour:::)
+-n:25.1
+}]
+
+[25.1:
+Dropping the weapon you wielded as ahuman being, howling with bestial rage, still vaguely aware that it is the Count Varcolac who has ultimately brought the Curse of the Werewolf upon you, in your new lycanthrope form you spring at the Varcolac-wolf, determined to exact your revenge.
+{
+-c:(codeword:add:code:Degnahc::) 
+-n:189
+}]
+
+[26:
+'Roll up! Roll up!' the elfin Carnivale Master shouts, his voice like a town crier's, seeing that he is about to lose a paying customer.
+'Tarne the savage Grendel, and see the unnatural cross between female beauty and rapacious reptile that is Serpensa the Snake-woman'.
+'Visit the haunting Hall of Mirrors, marvel at the magic of the Puppetmastec's marionettes or cross Madame Zelda's hand with gold to have her forecast your future.
+'All the fun of the fayre is here at the Carnivale!'
+You find yourself drawn to the little man's mesmerising gaze, unable to tear your eyes away.
+{
+-r:(2:lessOrEqual:change:134:90)
+}]
+
+[27:
+You take another step forward and your boot abruptly sinks into the squidgy ground up to your thigh.
+Your momentum carries you forward with your other foot and soon you are up to your waist in the stinking clutches of a peat bog.
+Grasses and moss have grown over this patch of marshy ground, hiding the dangers of the bog beneath.
+As you twist and turn, trying to see a way to get yourself out of the bog, your body sinks still further. 
+You are up to yoar chest when you spy the length of exposed root protruding from a tussock of grass on which a gnarled bush grows.
+Trying to gain any purchase you can from the ground beneath your feet you lean forward, straining every muscle in an attempt to reach root and pull yourseLf free.
+{
+-r:(3:lessOrEqual:stamina:128:84)
+}]
+
+[28:
+As the sun runs its course across the heavens, you climb higher through the wooded hills and the clouds dose in.
+During your trek you see not hair nor hide of the Beast.
+In fact you are barely aware of any signs of life in this desolate landscape.
+Tne sound of bird song ceased long ago in the woods of the lower slopes.
+You come in sight of an isolated farmstead.
+As you take in the drooping, mossy thatch of the farmhouse and the near-derelict nature of the tumbledown outbuildings, thunder rumbles across hilltops and the clouds burst.
+What starts as a shower becomes a torrential downpour within minutes.
+{
+-q:Take shelter in the run-down farm.(shelter:53)
+-q:Turn back and return to Vargenhof.(back:483)
+}]
+
+[29:
+It is almost dawn by the time you make it away from the Carnivale.
+Having tended to any wounds you may have received and eaten a meal (if you wish), you decide that it is time to move on from Balci altogether.
+Pressing on east, there are two routes you can take.
+{
+-q:Travel on the open road towards the town of Vargenhof.(town:144)
+-q:Follow the well-worn track that leads south-east in the forest.(forest:508)
+}]
+
+[30:
+Beaten back by the relentless attacks you find yourself teetering on the edge of the escarpment.
+The monstrous dog bounds forward to attack once more and you take an involuntary step back.
+Your heel touches midair and you topple backwards off the cliff.
+The last thing you see before your body is broken upon the jagged rocks below is the slavering face of the demon Shuck.
+Your adventure is over.
+{
+-n:E
+}]
+
+[31:
+The steady drip, drip, drip of water around the water echoes around the waters of the basin-like chamber you now find yourself in.
+Formed in a natural hollow in the rocky floor is a wide pool of sharply cold, crystal clear water.
+In darkrness it looks like a black mirror, disturbed only by the ocasional droplet of water seeping through from the bedrock above to drip into the pool below.
+{
+-q:Drink from the natural pool.(drink:185)
+-q:Go to the tunnel accessible through a pit-like hole in the cavern floor.(hole:97)
+-q:Go to the steeply inclined cleft in the wall of the cavern.(cleft:14)
+-q:Go to the uneven-floored tunnel with an almost triangular entrance.(triangular:142)
+-q:Go to the winding corkscrew tunnel.(corkscrew:159)
+-q:Go to the green crystal-river passageway.(passageway:70)
+}]
+
+[32:
+Ulrich bends down beside crone, curled in a ball in front of you, feeling for a pulse at her throat. 
+A moment later he rises, his head hanging, his chin on his chest.
+Before he speaks you know what he is going to say.
+'We are too late, she is gone'. 
+You do not need ask who the old woman was, either .
+From the moment you saw the cottage and heard Ulrich utter the name Grandmother you had a fearful premonition that this was the home of the wisewoman Zekova, the one person who could help you, and now she is dead.
+'There is nothing more we can do, my friend,' Ulrich says.
+'But we can avenge Grandmother Zekova's murder by hunting down here killer'.
+So you set off into the night once more, determined to run the insane lunatic to the ground and put an end to the nightmare tha this ill-fated night has become.
+You soon find yourself descending a path strewn with pernicious exposed roots.
+You become aware of distant yelps and howls.
+There is a sudden snarling roar behind you and you turn in time to see the monstrous Black Wolf launch itself from the deeper pools of darkness between the trees. 
+But this time it is Ulrich who turns out to its target. 
+The creature has revenge is its mind. 
+You hear a sickening crurch and Ulrich howls in pain as the wolf sinks its teeth into his throat.
+Then the woodsman lies still.
+You watch, frozen for a moment in disbelieving horror, as the wolf rises from Ulrich's prone form and you realise that it is now standing on its hind legs.
+Only the creature is a wolf no longer.
+Its body is shaped like that of a man, although it is still covered in coarse black fur and has the unmistakeable snout and arrow tip ears of a wolf.
+It has become something more than beast and less than human.
+Lips curling back from its bloodied fangs, the Black Werewolf growls, its bestial voice full of menace, and turns towards you.
+You have no choice but to fight.
+{
+-e:(BLACK WEREWOLF:7:7)
+-n:229
+}]
+
+[33:
+As you gaze around the chamber, your vision blurs momentarily and then refocuses, only now everything is suffused with an orange glow. 
+Burning torches have appeared in cast iron brackets on the walls. 
+That is not the only change: you are no longer alone either. 
+Five other people have joined you in the vault. 
+They are each standing a few feet from the edge of the pit, facing the gaping hole. 
+They are chantng the same phrase over and over, esoteric words that mean nothing to you, but words of power nonetheless. 
+They are carrying out some kind of invocation, the echoes of their chanting out of time with their voices, creating an unsetiling resonance that fills the vaulted space.
+None of them appears to be aware of you presence. 
+As they continue their rite, you examine each of the individuals in turn. 
+The first upon whom your gaze falls is an attrachive, black-haired woman wilt one eyebrow raised. 
+She wears a revealing, low-cut black bodice and long velvet skirts. 
+Next around the circle is a platinum-haired younger woman with striking aristocratic features, her slim figure hidden beneath the drapery of a velvet cape. 
+The third is a monk, only the white skin of his hands and face visible outside his heavy-cowled habit. 
+Then there is another woman, wearing ns midnight-blue gown embroidered with stars and moons. 
+She wears numerous charms on chains around her neck, suggesting she is an initiate of the magic arts. 
+Finally, there is a tall, raven-haired man, muscularly built and wearing a garish ruffled shirt, open to the waist, and a crushed velvet jacket.
+The man's dark hair falls in a thick mane around his shoulders, a wave of white hair running through it from the middle of his forehead. 
+Each of the people is holding something in their hands. 
+The wolfish-looking man holds a shining sword in front of him, its tip resting on the lip of the pit. 
+With one abrupt action, he huris the sword into the hungry black maw of the pit. 
+Each of the others in turn toss the relics of their former lives into the pit, their chanting rising in pitch and intensity. 
+Their voices are joined by a booming bellow, that rises from the depths of the pit, and thick shadow-black smoke begins to rise from the darkness below.
+Something has been summoned from the pit..
+
+Silence returns, sudden as a clap of thunder, leaving only the echo of its passing behind. The light fades, the gloom returns, and your vision of the vault is gone. 
+{
+-n:214
+}]
+
+[34:
+In frustation, you hurl a wrought-iron candelabra at the Obsidian Mirror, hoping to reveal its secrets that way.
+The black glass shatters, splintering into a thousand razor-sharp shards as does your own reflection.
+At the same time your body has received a multitude of horrendous stabbing wounds wounds and you drop to your knees.
+Gasping in agony, you catch a sliver of your reflection in an obsidian splinter. 
+There is something increasingly bestial about the expression that snarls back at you.
+For your rash action you have suffered the Curse of the Mirror.
+{
+-c:(damage:::2d:curse of the Mirror.:)
+-c:(statChange:add:change:1::)
+-n:321
+}]
+
+[35:
+You crouch over the body of the werewolf, lantern in one hand and sword ready in the other.
+Before your eyes the creature undergoes one final transformation.
+You watch appalled as the beast sheds much of its its thick black hair and the corpse becomes that of a pale-skinned, wild—haired man, missing his left hand.
+Suddenly aware of a snuffling sound behind you, you turn and come face-to-face with what looks like furious grizzly bear.
+Then you see that it is dressed in the tattered clothes of your woodsman ally.
+It takes you a moment to realise the terrible truth of what has happened before the Werebear is on you, terrible steel-claws ready to tear you limb from limb, and in that split second the beast cuffs you with one mighty paw.
+You have no choice but to fight your erstwhile friend.
+{
+-c:(statChange:stamina:subtract:2::)
+-e:(WEREBEAR:8:10)
+-ec:(damage:3:change:add:1)
+-n:200
+}]
+
+[36:
+The Countess’ servant swoops down on you, seizing your shoulders in its claw-footed grasp. 
+With two strong wing-beats, the Werebat hauls you up into the vault of the dome. 
+When you are some height above the chamber ﬂoor, it lets go of you again. 
+You crash down onto the cold marble with boneshattering force.
+{
+-c:(statChange:stamina:subtract:4::[-Quickening])
+-c:(statChange:skill:subtract:1::[-Quickening])
+-c:(statChange:stamina:subtract:1::[Quickening])
+-n:68
+}]
+
+[37:
+The cottage shudders with a resounding crash as something throws itself at the bolted door. 
+Incredibly, the wolves are attacking the cottage, trying to force their way in. 
+You are going to have to help defend Grandmother Zekova’s home from the creatures determined assault.
+There are three ways into the cottage, the door by which you entered and two windows. Ulrich, mother Zekova and you all guard one entrance each.
+{
+-e:(WOLF:6:5)
+-e:(WOLF:6:5)
+-e:(WOLF:6:5)
+-e:(WOLF:6:5)
+-e:(WOLF:6:5)
+-e:(WOLF:6:5)
+-e:(WOLF:6:5)
+-e:(WOLF:6:5)
+-c:(killEnemy:::Grandmother Zekova:1:)
+-c:(killEnemy:::Ulrich:2:)
+
+}]
+[38:
+Turning back, you retrace your steps through the tumbledown warren of the ruins. 
+You are within sigle of the spot where you entered the ruins when you become aware of a skittering, scurrying sound from all around you. 
+Iridescent black beetles Scuttle across the packed earth at your feet, while long-bodied centipedes writhe from between the bricks of the wall either side of you.
+Pale, almost luminous moths ﬂutter down from out of the darkness. 
+The oppressive feelliung of an all-pervading evil intensiﬁes as, right there in front of you, beetles, moths, centipedes, worms an spiders emerge from the shadows, scuttling, writhing and crawling over one another to form a swelling pile at your feet. 
+In seconds this mass of gathering vermim has become a pulsating mound of disgusting carric creatures. 
+With a sudden upwards thrust the mass the tiny living things takes on a semi-humanoid form. 
+The undulating body held together by the will of the maleﬁc presence that lives within these ruins, the Vermin-Host reaches for you with hands drippin with wriggling mealy bugs and, somewhere within the mass of creatures that you take to be a face, a disgusting maw opens, but makes no sound. 
+The only thing you can hear is the incessant slithering, skittering rattle of the writhing invertebrates. 
+You are going to have to ﬁght this bizarre manifestation of the evil possessing these ruins.
+{
+-e:(VERMIN-HOST:6:12)
+-n:143
+}]
+
+[39:
+Tugging the rusted grille free of the culvert opening, taking a deep breath, you crawl into the stinking tunnel beyond. 
+You have not gone far when you feel the tunnel angle downwards dramatically and, without any warning, ﬁnd yourself slipping on the wet slime coating the pipe. 
+Unable to control you descent, you slide head ﬁrst down the tunnel into the foetid darkness beyond. 
+{
+-n:194
+}]
+
+[40:
+'We have a little time before sunset,' Konrad says, 'so rest awhile here and enjoy your meal'. 
+The headman keeps you company as you gulp down your steaming bowl of stew. 
+Several things he mentioned have caught your attention, and there may be other things on your mind as well, of course. 
+As you ﬁnish your meal you seize the opportunity to ask Konrad more about the troubles besetting Strigoiva. 
+Will you ask him about:
+{
+-q:The Headless Highwayman.(headless:179)
+-q:The Shuck.(shuck:157)
+-q:Strigoiva's neighbouring settlements.(settlements:132)
+-q:The Howling.(howl:109)
+}]

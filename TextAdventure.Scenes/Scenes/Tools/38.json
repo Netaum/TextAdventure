@@ -1,0 +1,17 @@
+{
+    "conditions": null,
+    "description": "Turning back, you retrace your steps through the tumbledown warren of the ruins. \nYou are within sigle of the spot where you entered the ruins when you become aware of a skittering, scurrying sound from all around you. \nIridescent black beetles Scuttle across the packed earth at your feet, while long-bodied centipedes writhe from between the bricks of the wall either side of you.\nPale, almost luminous moths \ufb02utter down from out of the darkness. \nThe oppressive feelliung of an all-pervading evil intensi\ufb01es as, right there in front of you, beetles, moths, centipedes, worms an spiders emerge from the shadows, scuttling, writhing and crawling over one another to form a swelling pile at your feet. \nIn seconds this mass of gathering vermim has become a pulsating mound of disgusting carric creatures. \nWith a sudden upwards thrust the mass the tiny living things takes on a semi-humanoid form. \nThe undulating body held together by the will of the male\ufb01c presence that lives within these ruins, the Vermin-Host reaches for you with hands drippin with wriggling mealy bugs and, somewhere within the mass of creatures that you take to be a face, a disgusting maw opens, but makes no sound. \nThe only thing you can hear is the incessant slithering, skittering rattle of the writhing invertebrates. \nYou are going to have to \ufb01ght this bizarre manifestation of the evil possessing these ruins.",
+    "enemies": [
+        {
+            "combatConditions": null,
+            "name": "VERMIN-HOST",
+            "skill": "6",
+            "stamina": "12"
+        }
+    ],
+    "enemySpawner": null,
+    "exits": null,
+    "id": "38",
+    "nextScene": "143",
+    "roll": null
+}

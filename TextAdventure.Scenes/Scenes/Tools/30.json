@@ -1,0 +1,10 @@
+{
+    "conditions": null,
+    "description": "Beaten back by the relentless attacks you find yourself teetering on the edge of the escarpment.\nThe monstrous dog bounds forward to attack once more and you take an involuntary step back.\nYour heel touches midair and you topple backwards off the cliff.\nThe last thing you see before your body is broken upon the jagged rocks below is the slavering face of the demon Shuck.\nYour adventure is over.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "30",
+    "nextScene": "E",
+    "roll": null
+}

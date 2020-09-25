@@ -1,0 +1,21 @@
+{
+    "conditions": null,
+    "description": "It is almost dawn by the time you make it away from the Carnivale.\nHaving tended to any wounds you may have received and eaten a meal (if you wish), you decide that it is time to move on from Balci altogether.\nPressing on east, there are two routes you can take.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Travel on the open road towards the town of Vargenhof.",
+            "key": "town",
+            "sceneId": "144"
+        },
+        {
+            "description": "Follow the well-worn track that leads south-east in the forest.",
+            "key": "forest",
+            "sceneId": "508"
+        }
+    ],
+    "id": "29",
+    "nextScene": null,
+    "roll": null
+}

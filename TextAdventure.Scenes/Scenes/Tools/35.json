@@ -1,0 +1,34 @@
+{
+    "conditions": [
+        {
+            "attribute": "subtract",
+            "checkCondition": "stamina",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "2"
+        }
+    ],
+    "description": "You crouch over the body of the werewolf, lantern in one hand and sword ready in the other.\nBefore your eyes the creature undergoes one final transformation.\nYou watch appalled as the beast sheds much of its its thick black hair and the corpse becomes that of a pale-skinned, wild\u2014haired man, missing his left hand.\nSuddenly aware of a snuffling sound behind you, you turn and come face-to-face with what looks like furious grizzly bear.\nThen you see that it is dressed in the tattered clothes of your woodsman ally.\nIt takes you a moment to realise the terrible truth of what has happened before the Werebear is on you, terrible steel-claws ready to tear you limb from limb, and in that split second the beast cuffs you with one mighty paw.\nYou have no choice but to fight your erstwhile friend.",
+    "enemies": [
+        {
+            "combatConditions": [
+                {
+                    "attribute": "3",
+                    "checkCondition": "change",
+                    "nextScene": "1",
+                    "type": "damage",
+                    "value": "add"
+                }
+            ],
+            "name": "WEREBEAR",
+            "skill": "8",
+            "stamina": "10"
+        }
+    ],
+    "enemySpawner": null,
+    "exits": null,
+    "id": "35",
+    "nextScene": "200",
+    "roll": null
+}

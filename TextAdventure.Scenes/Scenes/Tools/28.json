@@ -1,0 +1,21 @@
+{
+    "conditions": null,
+    "description": "As the sun runs its course across the heavens, you climb higher through the wooded hills and the clouds dose in.\nDuring your trek you see not hair nor hide of the Beast.\nIn fact you are barely aware of any signs of life in this desolate landscape.\nTne sound of bird song ceased long ago in the woods of the lower slopes.\nYou come in sight of an isolated farmstead.\nAs you take in the drooping, mossy thatch of the farmhouse and the near-derelict nature of the tumbledown outbuildings, thunder rumbles across hilltops and the clouds burst.\nWhat starts as a shower becomes a torrential downpour within minutes.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Take shelter in the run-down farm.",
+            "key": "shelter",
+            "sceneId": "53"
+        },
+        {
+            "description": "Turn back and return to Vargenhof.",
+            "key": "back",
+            "sceneId": "483"
+        }
+    ],
+    "id": "28",
+    "nextScene": null,
+    "roll": null
+}

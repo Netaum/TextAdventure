@@ -1,0 +1,16 @@
+{
+    "conditions": null,
+    "description": "'Roll up! Roll up!' the elfin Carnivale Master shouts, his voice like a town crier's, seeing that he is about to lose a paying customer.\n'Tarne the savage Grendel, and see the unnatural cross between female beauty and rapacious reptile that is Serpensa the Snake-woman'.\n'Visit the haunting Hall of Mirrors, marvel at the magic of the Puppetmastec's marionettes or cross Madame Zelda's hand with gold to have her forecast your future.\n'All the fun of the fayre is here at the Carnivale!'\nYou find yourself drawn to the little man's mesmerising gaze, unable to tear your eyes away.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "26",
+    "nextScene": null,
+    "roll": {
+        "attribute": "change",
+        "checkCondition": "lessOrEqual",
+        "numberOfDice": "2",
+        "sceneFail": "90",
+        "sceneSuccess": "134"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "conditions": [
+        {
+            "attribute": "luck",
+            "checkCondition": "subtract",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "2"
+        },
+        {
+            "attribute": "skill",
+            "checkCondition": "increase",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        },
+        {
+            "attribute": "stamina",
+            "checkCondition": "increase",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "2"
+        },
+        {
+            "attribute": "weapon",
+            "checkCondition": "unequip",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "inventory",
+            "value": ""
+        },
+        {
+            "attribute": "armour",
+            "checkCondition": "unequip",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "inventory",
+            "value": ""
+        }
+    ],
+    "description": "It is no good; the lycanthropy has your body within its clawed grip now. \nWith a yowl of intense, bone-wrenching pain, your physical form reshapes itself, growing in height, limbs becoming longer, your pain-contorted features giving way to a lupine muzzle.\nYou have become the thing you have fought hard and for so long to thwart.\nYour clothes and leather armour can no longer contain your changing body and are shed along with your human skin, as the hairy wolf's hide rips through from inside.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "25",
+    "nextScene": "25.1",
+    "roll": null
+}

@@ -1,0 +1,19 @@
+{
+    "conditions": [
+        {
+            "attribute": "luck",
+            "checkCondition": "add",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "With such a large target and at such close range there was never any question of you missing.\nThe rod buries itself deep inside the torso of the hulking golem but it does not even slow the brute.\nWith clanking steps it stalks towards you.\nIt is at that moment that lightning strikes the windmill again.\nScintillating flashes of elemental energy explode around the laboratory, shattering dials and setting fire to banks of arcane equipment.\nAll of this raw storm-force finds its way to the lightning rod that you have just plunged into the golem, with devastating effect.\nThe man-made monster shudders where it stands, as the full force of the storm passes through its metallic components.\nIts dead flesh cooks to a blackened cinder while its metallic parts melt and fuse together.\nEventually the whole ruined creation topples over backwards and then crashes onto the floor of the laboratory.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "22",
+    "nextScene": "169",
+    "roll": null
+}

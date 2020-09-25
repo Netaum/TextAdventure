@@ -1,0 +1,76 @@
+{
+    "conditions": [
+        {
+            "attribute": "",
+            "checkCondition": "",
+            "codeWords": "",
+            "sourceDescription": "1",
+            "type": "killEnemy",
+            "value": "Grandmother Zekova"
+        },
+        {
+            "attribute": "",
+            "checkCondition": "",
+            "codeWords": "",
+            "sourceDescription": "2",
+            "type": "killEnemy",
+            "value": "Ulrich"
+        }
+    ],
+    "description": "The cottage shudders with a resounding crash as something throws itself at the bolted door. \nIncredibly, the wolves are attacking the cottage, trying to force their way in. \nYou are going to have to help defend Grandmother Zekova\u2019s home from the creatures determined assault.\nThere are three ways into the cottage, the door by which you entered and two windows. Ulrich, mother Zekova and you all guard one entrance each.",
+    "enemies": [
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        },
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        },
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        },
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        },
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        },
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        },
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        },
+        {
+            "combatConditions": null,
+            "name": "WOLF",
+            "skill": "6",
+            "stamina": "5"
+        }
+    ],
+    "enemySpawner": null,
+    "exits": null,
+    "id": "37",
+    "nextScene": null,
+    "roll": null
+}

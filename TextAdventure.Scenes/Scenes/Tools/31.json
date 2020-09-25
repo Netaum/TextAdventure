@@ -1,0 +1,41 @@
+{
+    "conditions": null,
+    "description": "The steady drip, drip, drip of water around the water echoes around the waters of the basin-like chamber you now find yourself in.\nFormed in a natural hollow in the rocky floor is a wide pool of sharply cold, crystal clear water.\nIn darkrness it looks like a black mirror, disturbed only by the ocasional droplet of water seeping through from the bedrock above to drip into the pool below.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Drink from the natural pool.",
+            "key": "drink",
+            "sceneId": "185"
+        },
+        {
+            "description": "Go to the tunnel accessible through a pit-like hole in the cavern floor.",
+            "key": "hole",
+            "sceneId": "97"
+        },
+        {
+            "description": "Go to the steeply inclined cleft in the wall of the cavern.",
+            "key": "cleft",
+            "sceneId": "14"
+        },
+        {
+            "description": "Go to the uneven-floored tunnel with an almost triangular entrance.",
+            "key": "triangular",
+            "sceneId": "142"
+        },
+        {
+            "description": "Go to the winding corkscrew tunnel.",
+            "key": "corkscrew",
+            "sceneId": "159"
+        },
+        {
+            "description": "Go to the green crystal-river passageway.",
+            "key": "passageway",
+            "sceneId": "70"
+        }
+    ],
+    "id": "31",
+    "nextScene": null,
+    "roll": null
+}

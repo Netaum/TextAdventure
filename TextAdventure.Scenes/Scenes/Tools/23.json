@@ -1,0 +1,21 @@
+{
+    "conditions": null,
+    "description": "To your left at the base of the wall, where it merges with the natural rock face, is a grilled culvert, the rusted bars clad with moss.\nAn unpleasant odour, a blend raw effluent and damp-rot, rises from the tunnel.\nEven without your lycanthropy-heightened senses the stink would make your eyes water.\nYou test the resistance of the bars and, with effort, the grille twists in the hole.\nYou do not fancy scaling the high, sheer wall in front of you in the pitch darkness, nor, as the temperature drops, do you fancy spending another night in the open.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "Try the culvert.",
+            "key": "culvert",
+            "sceneId": "39"
+        },
+        {
+            "description": "Ring the bell.",
+            "key": "ring",
+            "sceneId": "58"
+        }
+    ],
+    "id": "23",
+    "nextScene": null,
+    "roll": null
+}

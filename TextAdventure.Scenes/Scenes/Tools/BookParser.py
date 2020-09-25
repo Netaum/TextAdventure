@@ -59,7 +59,7 @@ class Enemy:
 	def add_move_condition(self, combatCondition):
 		if not self.combatConditions:
 			self.combatConditions = []
-		self.combatConditions.append(moveCondition)
+		self.combatConditions.append(combatCondition)
 
 class Spawn:
 	def __init__(self,
@@ -92,12 +92,28 @@ class Condition:
 				 checkCondition,
 				 attribute,
 				 value,
-				 sourceDescription):
+				 sourceDescription,
+				 codeWords):
 		self.type = type
 		self.checkCondition = checkCondition
 		self.attribute = attribute
 		self.value = value
 		self.sourceDescription = sourceDescription
+		self.codeWords = codeWords
+
+class Roll:
+	def __init__(self,
+				 numberOfDice,
+				 checkCondition,
+				 attribute,
+				 sceneSuccess,
+				 sceneFail):
+		self.numberOfDice = numberOfDice
+		self.checkCondition = checkCondition
+		self.attribute = attribute
+		self.sceneSuccess = sceneSuccess
+		self.sceneFail = sceneFail
+
 
 class Scene:
 	def __init__(self,
@@ -110,6 +126,7 @@ class Scene:
 		self.exits = None
 		self.enemies = None
 		self.enemySpawner = None
+		self.roll = None
 
 	def add_exit(self, exit):
 		if not self.exits:
@@ -132,58 +149,67 @@ class Scene:
 			self.enemies = []
 		self.enemies.append(enemy)
 
+	def add_roll(self, roll):
+		self.roll = roll 
 
 chapterPattern = re.compile("\[([^:]+):([^{]+){([^}]+)}\]")
-conditionPattern = re.compile("-c:\(([^:]*):([^:]*):([^:]*):([^:]*):([^:]*)\)")
-scenePattern = re.compile("-n:(.+)")
+conditionPattern = re.compile("-c:\(([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*)\)")
+scenePattern = re.compile("-n:(\w+)")
 exitPattern = re.compile("-q:([^\(]+)\((\w+):(\w+)\)")
 spawnPattern = re.compile("-s:\(([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*)\)")
 enemyPattern = re.compile("-e:\(([^:]*):([^:]*):([^:]*)\)")
 moveCPattern = re.compile("-ec:\(([^:]*):([^:]*):([^:]*):([^:]*):([^:]*)\)")
+rollPatter = re.compile("-r:\(([^:]*):([^:]*):([^:]*):([^:]*):([^:]*)\)")
+
 
 txt = ""
 scenes = {}
-with open("formated.txt", "r") as file:
+with open("formated02.txt", "r") as file:
 	txt = file.read()
 	
 for (number, text, exits) in re.findall(chapterPattern, txt):
-	#fileName = f"{number}.txt"
-	#with open(fileName, "w+") as f:
-	#	f.write(text.strip())
+	
 	description = text.strip()
-	s = Scene(number, description)
-	for line in exits.splitlines():
+	try:
+		s = Scene(number, description)
+		for line in exits.splitlines():
+			if line.startswith("-c"):
+				(cType, cCheck, cStat, cValue, cDesc, cCodeWords) = re.findall(conditionPattern, line)[0]
+				c = Condition(cType,cCheck,cStat,cValue,cDesc,cCodeWords)
+				s.add_condition(c)
 
-		if line.startswith("-c"):
-			(cType, cCheck, cStat, cValue, cDesc) = re.findall(conditionPattern, line)[0]
-			c = Condition(cType,cCheck,cStat,cValue,cDesc)
-			s.add_condition(c)
+			if line.startswith("-n"):
+				(sNext) = re.findall(scenePattern, line)[0]
+				s.add_next_scene(sNext)
 
-		if line.startswith("-n"):
-			(sNext) = re.findall(scenePattern, line)[0]
-			s.add_next_scene(sNext)
+			if line.startswith("-q"):
+				(qDesc,qKey,qScene) = re.findall(exitPattern, line)[0]
+				q = Exit(qDesc,qKey,qScene)
+				s.add_exit(q)
 
-		if line.startswith("-q"):
-			(qDesc,qKey,qScene) = re.findall(exitPattern, line)[0]
-			q = Exit(qDesc,qKey,qScene)
-			s.add_exit(q)
+			if line.startswith("-r"):
+				(rNumber,rCheck,rAttribute,rSuccess,rFail) = re.findall(rollPatter, line)[0]
+				roll = Roll(rNumber,rCheck,rAttribute,rSuccess,rFail)
+				s.add_roll(roll)
 
-		if line.startswith("-s"):
-			(sName,sType,sDice,sPlus,sSkill,sStamina,sScene) = re.findall(spawnPattern, line)[0]
-			spw = Spawn(sName, sType, sScene, sDice, sPlus, sSkill, sStamina)
-			s.set_spawn(spw)
-		
-		if line.startswith("-e:"):
-			(name, skill, stamina) = re.findall(enemyPattern, line)[0]
-			e = Enemy(name, skill, stamina)
-			s.add_enemy(e)
+			if line.startswith("-s"):
+				(sName,sType,sDice,sPlus,sSkill,sStamina,sScene) = re.findall(spawnPattern, line)[0]
+				spw = Spawn(sName, sType, sScene, sDice, sPlus, sSkill, sStamina)
+				s.set_spawn(spw)
+			
+			if line.startswith("-e:"):
+				(name, skill, stamina) = re.findall(enemyPattern, line)[0]
+				e = Enemy(name, skill, stamina)
+				s.add_enemy(e)
 
-		if line.startswith("-ec:"):
-			(mType,attribute,checkCondition,value,nextScene) = re.findall(moveCPattern, line)[0]
-			mc = MoveCondition(mType,attribute,checkCondition,value,nextScene)
-			e.add_move_condition(mc)
-
-	scenes[number] = s
+			if line.startswith("-ec:"):
+				(mType,attribute,checkCondition,value,nextScene) = re.findall(moveCPattern, line)[0]
+				mc = MoveCondition(mType,attribute,checkCondition,value,nextScene)
+				e.add_move_condition(mc)
+		scenes[number] = s
+	except:
+		print("Error:", number, text)
+	
 	fileName = f"{number}.json"
 	with open(fileName, "w+") as f:
 		json_text = json.dumps(s, default=lambda o: o.__dict__, sort_keys=True, indent=4)

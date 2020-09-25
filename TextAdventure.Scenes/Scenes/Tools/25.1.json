@@ -1,0 +1,19 @@
+{
+    "conditions": [
+        {
+            "attribute": "code",
+            "checkCondition": "add",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "codeword",
+            "value": "Degnahc"
+        }
+    ],
+    "description": "Dropping the weapon you wielded as a human being, howling with bestial rage, still vaguely aware that it is the Count Varcolac who has ultimately brought the Curse of the Werewolf upon you, in your new lycanthrope form you spring at the Varcolac-wolf, determined to exact your revenge.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "25.1",
+    "nextScene": "189",
+    "roll": null
+}

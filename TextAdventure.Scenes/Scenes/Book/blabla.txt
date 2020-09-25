@@ -1,0 +1,30 @@
+- Sigla App (Itau: Sergio): Precisa pedir, sai junto
+- Client Credentials (Itau: Sergio) Criptografado ( via pi pepper )
+- Repo no Gitlab (Sergio consegue criar): abrir chamado
+- Workload (puppet) vai ser numa máquina nova ou existente (precisa de chamado)
+
+
+- Definição de entrada e saida (RAML) (tem documento com pfeifer)
+
+- Olhar o programa que já existe 
+- DB2 direto: contato (Marcio Malheiro Shirai)
+
+- Tabela TBVPIMV0 (visual age) VPA8
+
+* TBVPIMV0
+- IDCLSIMV (Classificacao)
+
+
+- URL: propopostas/{ID}/imoveis (idpropfi) 
+
+- Criar pacote no changeman (VP0I 000 1441)
+- Transação, Programa e Copybook (entrada e saida)
+
+MELHORIAS
+- Template não muda o projectId
+- Remover lixo do Template
+- Criar base request response pastas corretas abstract
+- Common com nome errado
+
+* DEV
+- Criar snippet use case

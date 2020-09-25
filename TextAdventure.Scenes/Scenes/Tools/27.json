@@ -1,0 +1,16 @@
+{
+    "conditions": null,
+    "description": "You take another step forward and your boot abruptly sinks into the squidgy ground up to your thigh.\nYour momentum carries you forward with your other foot and soon you are up to your waist in the stinking clutches of a peat bog.\nGrasses and moss have grown over this patch of marshy ground, hiding the dangers of the bog beneath.\nAs you twist and turn, trying to see a way to get yourself out of the bog, your body sinks still further. \nYou are up to yoar chest when you spy the length of exposed root protruding from a tussock of grass on which a gnarled bush grows.\nTrying to gain any purchase you can from the ground beneath your feet you lean forward, straining every muscle in an attempt to reach root and pull yourseLf free.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "27",
+    "nextScene": null,
+    "roll": {
+        "attribute": "stamina",
+        "checkCondition": "lessOrEqual",
+        "numberOfDice": "3",
+        "sceneFail": "84",
+        "sceneSuccess": "128"
+    }
+}

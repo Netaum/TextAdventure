@@ -1,0 +1,25 @@
+{
+    "conditions": [
+        {
+            "attribute": "luck",
+            "checkCondition": "subtract",
+            "codeWords": "",
+            "sourceDescription": "",
+            "type": "statChange",
+            "value": "1"
+        }
+    ],
+    "description": "Taking a firm hold of the stones at the lip of the pit you carefully lower yourself over the edge, down into the darkness.\nThere are plenty of hand-and-foot-holds to be found but the stones lining the pit are slick with slime.\nThe air in the shaft smells of damp, fungal matter.",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": null,
+    "id": "24",
+    "nextScene": null,
+    "roll": {
+        "attribute": "luck",
+        "checkCondition": "lessOrEqual",
+        "numberOfDice": "2",
+        "sceneFail": "121",
+        "sceneSuccess": "221"
+    }
+}

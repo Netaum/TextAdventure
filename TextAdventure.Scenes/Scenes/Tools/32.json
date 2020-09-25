@@ -1,0 +1,17 @@
+{
+    "conditions": null,
+    "description": "Ulrich bends down beside crone, curled in a ball in front of you, feeling for a pulse at her throat. \nA moment later he rises, his head hanging, his chin on his chest.\nBefore he speaks you know what he is going to say.\n'We are too late, she is gone'. \nYou do not need ask who the old woman was, either .\nFrom the moment you saw the cottage and heard Ulrich utter the name Grandmother you had a fearful premonition that this was the home of the wisewoman Zekova, the one person who could help you, and now she is dead.\n'There is nothing more we can do, my friend,' Ulrich says.\n'But we can avenge Grandmother Zekova's murder by hunting down here killer'.\nSo you set off into the night once more, determined to run the insane lunatic to the ground and put an end to the nightmare tha this ill-fated night has become.\nYou soon find yourself descending a path strewn with pernicious exposed roots.\nYou become aware of distant yelps and howls.\nThere is a sudden snarling roar behind you and you turn in time to see the monstrous Black Wolf launch itself from the deeper pools of darkness between the trees. \nBut this time it is Ulrich who turns out to its target. \nThe creature has revenge is its mind. \nYou hear a sickening crurch and Ulrich howls in pain as the wolf sinks its teeth into his throat.\nThen the woodsman lies still.\nYou watch, frozen for a moment in disbelieving horror, as the wolf rises from Ulrich's prone form and you realise that it is now standing on its hind legs.\nOnly the creature is a wolf no longer.\nIts body is shaped like that of a man, although it is still covered in coarse black fur and has the unmistakeable snout and arrow tip ears of a wolf.\nIt has become something more than beast and less than human.\nLips curling back from its bloodied fangs, the Black Werewolf growls, its bestial voice full of menace, and turns towards you.\nYou have no choice but to fight.",
+    "enemies": [
+        {
+            "combatConditions": null,
+            "name": "BLACK WEREWOLF",
+            "skill": "7",
+            "stamina": "7"
+        }
+    ],
+    "enemySpawner": null,
+    "exits": null,
+    "id": "32",
+    "nextScene": "229",
+    "roll": null
+}

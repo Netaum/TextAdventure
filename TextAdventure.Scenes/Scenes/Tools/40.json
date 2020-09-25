@@ -1,0 +1,31 @@
+{
+    "conditions": null,
+    "description": "'We have a little time before sunset,' Konrad says, 'so rest awhile here and enjoy your meal'. \nThe headman keeps you company as you gulp down your steaming bowl of stew. \nSeveral things he mentioned have caught your attention, and there may be other things on your mind as well, of course. \nAs you \ufb01nish your meal you seize the opportunity to ask Konrad more about the troubles besetting Strigoiva. \nWill you ask him about:",
+    "enemies": null,
+    "enemySpawner": null,
+    "exits": [
+        {
+            "description": "The Headless Highwayman.",
+            "key": "headless",
+            "sceneId": "179"
+        },
+        {
+            "description": "The Shuck.",
+            "key": "shuck",
+            "sceneId": "157"
+        },
+        {
+            "description": "Strigoiva's neighbouring settlements.",
+            "key": "settlements",
+            "sceneId": "132"
+        },
+        {
+            "description": "The Howling.",
+            "key": "howl",
+            "sceneId": "109"
+        }
+    ],
+    "id": "40",
+    "nextScene": null,
+    "roll": null
+}
